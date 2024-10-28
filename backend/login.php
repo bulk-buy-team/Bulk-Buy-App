@@ -1,5 +1,4 @@
 <?php
-session_start();
 // Database connection
 $servername = "localhost"; // or your server
 $username = "root";        // your database username
@@ -24,11 +23,9 @@ if (isset($_POST["submit"]))
     if ($loginresult) {
             $_SESSION['user'] = $loginresult;
             echo 'login  successful';
-            header("location:.\login.html");
          } 
          else{
-            $_SESSION["message"] = 'wrong username and password';
-            header("location: ./login.php");
+            echo 'wrong username and password';
          }
 }
 
