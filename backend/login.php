@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Database connection
 $servername = "localhost"; // or your server
 $username = "root";        // your database username
@@ -13,6 +14,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
+
+$data = json_decode( file_get_contents("php://input"));
+echo $data->user_id;
+
+
 if (isset($_POST["submit"])) 
 {
     $username = $_POST["username"];
@@ -21,13 +27,19 @@ if (isset($_POST["submit"]))
        $result = $conn->query($queryforlogin);
         $loginresult = $result->fetch_assoc();
     if ($loginresult) {
-            $_SESSION['user'] = $loginresult;
-            echo 'login  successful';
-         } 
+
+            // $_SESSION['user1'] = $loginresult;
+            // header("location:../dashboard.php");
+
+
+            http_response_code(200);
+            echo json_encode(array("result"=>$loginresult));
+            return;
+        } 
          else{
             echo 'wrong username and password';
          }
 }
-
+?>
 
 

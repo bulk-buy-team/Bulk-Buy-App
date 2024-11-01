@@ -25,11 +25,11 @@ if (isset ($_POST["submit"])) {
 
         // SQL query to insert data
         $stmt = $conn->prepare("INSERT INTO user (firstname, lastname, email, username, password) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss", $firstname, $lastname, $email, $username, $password);
+        $stmt->bind_param("sssss",$firstname, $lastname, $email, $username, $password);
         $stmt->execute();
     
         if ($stmt) {
-            header("location:/login.html");
+            header("location:../login.html");
         } else {
             echo "Error ";
         }
