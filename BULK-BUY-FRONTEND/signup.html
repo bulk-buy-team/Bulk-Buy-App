@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/styles/signup.css">
+  <title>Sign Up</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-wrapper">
+      <h1>Sign up</h1>
+      <p>Welcome to the best bulk buying platform</p>
+      <form id="form">
+        <label for="firstName">First Name</label>
+        <input type="text" 
+        id="firstName" 
+        placeholder="John" 
+        required="true"
+        name="firstName">
+        <label for="lastName">Last Name</label>
+        <input type="text" 
+        id="lastName" 
+        placeholder="Doe" 
+        required="true" 
+        name="lastName">
+        <label for="email">Email</label>
+        <input type="email" 
+        id="email" 
+        placeholder="example@gmail.com" 
+        required="true"
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        name="email">
+        <label for="password">Password</label>
+        <input type="password" 
+        id="password" 
+        placeholder="passwrd123" 
+        required="true" 
+        name="password" minlength="8" maxlength="16">
+        <label for="comfirmPasswrd">Comfirm Password</label>
+        <input type="password" 
+        id="comfirmPasswrd" 
+        placeholder="passwrd123" 
+        required="true" 
+        name="comfirmPasswrd" minlength="8" maxlength="16">
+        <button class="submit" type="submit">
+          Sign Up
+        </button>
+      </form>
+      <p>Already have an account?</p>
+      <p><a href="#">login</a> instead.</p>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+<script src="assets/scripts/signup.js"></script>
+</body>
+</html>

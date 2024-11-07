@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/styles/forgot.css">
+  <title>Forgot password</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-wrapper">
+      <h1>Forgot Password</h1>
+      <p>Emter the email address you used when creating the account and we will send you an otp</p>
+      <form action="#" id="form">
+        <label for="email">Email</label>
+        <input type="email" 
+        id="email" 
+        placeholder="example@gmail.com" 
+        required="true"
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        name="email">
+        <button class="submit" type="submit">
+          Get Otp
+        </button>
+      </form>
+      <p>Remembered your Password?</p>
+      <p><a href="#">login</a></p>
+    </div>
+  </div>
+<script src="assets/scripts/forgot.js"></script>
+</body>
+</html>
