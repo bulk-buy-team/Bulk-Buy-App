@@ -10,7 +10,7 @@
 }
 .form-wrapper{
   padding: 3rem 1.3rem;
-  background-color: #80C66E;
+  background-color: #E5B24E;
   height: 100%;
   width: 100%;
 }
@@ -48,14 +48,14 @@ input{
   padding: 0.8rem;
   margin: 0.8rem 0rem;
   border-radius: 15px;
-  border: 1px solid #DCA323;
+  border: 1px solid #CD3301;
   color: #fff;
-  background-color: #DCA323;
+  background-color: #CD3301;
   box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
 }
 input:focus{
   outline: none;
-  border: 2px solid #DCA323;
+  border: 2px solid #34A817;
 }
 /* input:invalid{
   border: 2px solid red;
@@ -92,7 +92,7 @@ input:valid{
   .form-wrapper{
     width: 45%;
     padding: 5rem 2rem;
-    border: 1px solid #80C66E;
+    border: 1px solid #E5B24E;
     border-radius: 3px;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
   }
