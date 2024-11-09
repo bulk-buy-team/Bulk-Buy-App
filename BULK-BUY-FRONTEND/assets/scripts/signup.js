@@ -2,6 +2,14 @@ const form = document.getElementById('form')
 const submit = document.querySelector('.submit')
 const comfirmPasswrd = document.getElementById('comfirmPasswrd')
 
+let hamburger = document.querySelector(".hamburger");
+let menu = document.querySelector("ul");
+
+hamburger.addEventListener("click", ()=>{
+    menu.classList.toggle("mobile-nav-list");
+})
+
+
 //simple fumctiom for comaping passwords 
 //has not been properly implemented
 function comparePassword(pswrd1 , pswrd2){

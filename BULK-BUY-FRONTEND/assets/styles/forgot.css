@@ -62,7 +62,7 @@ input:focus{
 }
 input:valid{
   border: 2px solid green; */
-}
+
 ::placeholder{
   color: grey;
   font-size: 0.9rem;
