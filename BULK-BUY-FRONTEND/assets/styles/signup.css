@@ -2,268 +2,98 @@
   padding: 0rem;
   margin: 0rem;
   box-sizing: border-box;
-  font-family: 'Montserrat';
-  /* border: thin solid red; */
-  /* font-size: 1em; */
+  font-family: Arial Sans-Serif Courier New Montserrat Noto Serif Arimo;
 }
-
-:root {
-  --clr-neutral: #F5F5F5;
-  --clr-accent:#CD3301;
-  --clr-primary: #DCA422;
-  --clr-secondary: #E5B24E;
-  --padding-main: 10%;
-}
-
-header {
-  display: grid;
-  grid-template-rows: minmax( 15vh, 80px);
-  padding-inline: var(--padding-main);
-  background-color: var(--clr-primary);
-}
-
-nav {
-  display: flex;
-  /* justify-items: space-between; */
-  align-items: center;
-  justify-content: space-between;
-  /* gap: 1em; */
-  font-family: 'Montserrat';
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2em;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav .cta {
-  justify-self: flex-end;
-}
-
-nav div {
-  display: inline-flex;
-  justify-self: end;
-  align-items: center;
-}
-
-a {
-  text-decoration: none;
-  color: var(--clr-neutral);
-}
-
-nav div {
-  display: flex;
-  gap: 1em;
-  white-space: nowrap;
-  text-wrap: nowrap;
-}
-nav li a {
-  border: 2px solid var(--clr-neutral);
-  padding: 10px 30px;
-  border-radius: 50px;
-}
-
-.sign-up {
-  background-color: var(--clr-accent);
-  border-color: var(--clr-accent);
-} 
-
-nav form {
-  padding: 10px 20px;
-  border-radius: 50px;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  background-color: var(--clr-neutral);
-}
-
-nav input {
+.container{
   width: 100%;
-  outline: none;
-  border: none;
-  background-color: var(--clr-neutral);
+  /* height: 100vh; */
 }
-
-nav img {
-  width: 1em;
-}
-
-main {
-  position: relative;
-  padding-inline: var(--padding-main); 
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  align-content: center;
-  min-height: 85vh;
-  overflow-x: hidden;
-/* 
-  background: url(../images/55853.jpg.png);
-  background-size: cover; */
-}
-
-main::-webkit-scrollbar{
-  display: none;
-}
-
-.hero-image img {
+.form-wrapper{
+  padding: 2rem 1.3rem;
+  background-color: #E5B24E;
+  height: 100%;
   width: 100%;
 }
-
-main form {
-  border-radius: 5px;
-  max-width: 420px;
-  padding: 2.5em 2.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-
-  background-color: var(--clr-secondary);
-  color: var(--clr-neutral
-  );
-}
-
-.sign-in-text {
-  display: inline-grid;
-  justify-items: center;
-}
-
-
-main span {
+h1{
   text-align: center;
-  font-size: .8em;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  color: #fff;
 }
-
-main .input-container {
-  display: inline-grid;
+p,a{
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+}
+form{
+  margin: 1rem 0rem;
+}
+label{
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #fff;
+}
+input{
   width: 100%;
-}
-
-main input {
-  width: 100%;
-  outline: none;
-  border: none;
-  height: 3em;
-  padding: .7em 1em;
-}
-
-.input-fields {
-  width: 100%;
-  display: inline-grid;
-  gap: .8em;
-}
-
-label {
-  margin-bottom: 5px;
-}
-
-main .input-container input {
+  padding: 0.6rem 0.7rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid #fff;
   border-radius: 3px;
-  background-color: var(--clr-neutral);
 }
-
-.forgot-password {
-  justify-self: end;
-  text-decoration: underline;
-  font-size: 1em;
-}
-
-main form input[type="submit"] {
+.submit{
+  font-size: 0.9rem;
+  font-weight: bold;
   width: 100%;
-  padding: .5em 1em;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 50px;
+  padding: 0.8rem;
+  margin: 0.8rem 0rem;
+  border-radius: 15px;
+  border: 1px solid #CD3301;
+  color: #fff;
+  background-color: #CD3301;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+}
+input:focus{
   outline: none;
-
-  background-color: var(--clr-accent);
-  color: var(--clr-neutral);
+  border: 2px solid #34A817;
 }
-  
-.submit-text {
-  display: inline-flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  font-size: 1rem;
+/* input:invalid{
+  border: 2px solid red;
 }
-
-.submit-text a {
-  color: var(--clr-neutral);
-  text-decoration: underline;
+input:valid{
+  border: 2px solid green; */
 }
-
-.circle {
-  position: absolute;
-  bottom: -10em;
-  right: -12em;
-  width: 30em;
-  height: 30em;
-  border-radius: 100%;
-  background-color: var(--clr-secondary);
-  opacity: 50%;
+::placeholder{
+  color: grey;
+  font-size: 0.9rem;
 }
-
-.hamburger {
+.img-cont{
   display: none;
-  gap: 5px;
-  align-self: center;
-  position: relative;
-  z-index: 5;
 }
 
-.hamburger div {
-  width: 3em;
-  height: .3em;
-  border-radius: 5px;
-  background-color: var(--clr-neutral);
-}
-
-@media screen and (max-width: 620px) {
-  .hamburger {
-    display: grid;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .mobile-nav-list{
+@media(min-width: 901px){
+  body{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4em;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 4;
-    background-color: var(--clr-secondary);
-    opacity: .9;
+    background-color: #F1F1F1;
+    padding: 3rem;
   }
-
-  main {
-    grid-template-columns: 1fr;
-    position: relative;
-
-  
+  .container{
+   width: 90%;
+   /* height: 70vh; */
+   padding: 5rem;
+   display: flex;
+   margin: auto;
+   background-image: url('/assets/images/cyber-monday-retail-sales.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 0.5px solid #F1F1F1;
+    border-radius: 3px;
   }
-  
-  main form {
-    position: absolute;
-    justify-self: center;
-    align-self: center;
-    z-index: 2;
-    margin-top: 4em;
-    opacity: .9;
-    background-color: var(--clr-secondary);
-    /* backdrop-filter: blur(20px); */
+  .form-wrapper{
+    width: 45%;
+    padding: 1rem 2rem;
+    border: 1px solid #E5B24E;
+    border-radius: 3px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
   }
 }

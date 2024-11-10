@@ -2,6 +2,14 @@ const form = document.getElementById('form')
 const submit = document.querySelector('.submit')
 const comfirmPasswrd = document.getElementById('comfirmPasswrd')
 
+let hamburger = document.querySelector(".hamburger");
+let menu = document.querySelector("ul");
+
+hamburger.addEventListener("click", ()=>{
+    menu.classList.toggle("mobile-nav-list");
+})
+
+
 //simple fumctiom for comaping passwords 
 //has not been properly implemented
 function comparePassword(pswrd1 , pswrd2){
@@ -26,7 +34,7 @@ submit.addEventListener('submit', (e) => {
   let email = formData.get('email');
   let password = formData.get('password');
   let confirmpswrd = formData.get('comfirmPasswrd');
-  
+  cons
   if(confirmPswrd === password){
     axios.post('/endpoint',{
       firstname: firstName,
@@ -35,13 +43,8 @@ submit.addEventListener('submit', (e) => {
       password: password
     })
     .then(res => {
-      if(res.success === true){
-        console.log(res.data)
-        window.location.href = '/otp.html'
-      }
-    })
-    .catch( error => {
-      console.error(error)
+      console.log(res.data)
+      window.location.href = '/otp.html'
     })
   }else{
     alert("not the same")
