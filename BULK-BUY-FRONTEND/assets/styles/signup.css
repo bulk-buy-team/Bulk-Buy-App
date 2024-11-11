@@ -13,6 +13,7 @@
 }
 .nav{
   background-color: var(--clr-primary);
+  padding: 0.5rem;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -42,6 +43,8 @@
   font-weight: bold;
   padding: 0.4rem 1rem;
   text-align: center;
+  border: 2px solid var(--clr-neutral);
+  border-radius: 5px;
 }
 .active_link{
   background-color: var(--clr-accent);
@@ -154,6 +157,8 @@ input:placeholder{
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
+    width: 100%;
+    height: 100vh;
   }
   .cont-main{
    width: 90%;
@@ -179,12 +184,12 @@ input:placeholder{
   .circle{
     z-index: 5;
   }
-  .hambuger .bar{
-    display: none;
-  }
   .cont-fluid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .hambuger .bar{
+    display: none;
   }
   .nav-flex{
    grid-column: 1/2; 
