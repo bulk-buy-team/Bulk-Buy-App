@@ -185,14 +185,14 @@ input:valid{
     border-radius: 3px;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
   }
+  .hambuger .bar{
+    display: none;
+  }
   form{
     margin: 1rem 0rem;
   }
   .circle{
     z-index: 5;
-  }
-  .hambuger .bar{
-    display: none;
   }
   .cont-fluid{
     display: grid;

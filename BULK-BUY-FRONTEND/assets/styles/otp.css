@@ -192,12 +192,12 @@ input:valid{
   .circle{
     z-index: 5;
   }
-  .hambuger .bar{
-    display: none;
-  }
   .cont-fluid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .hambuger .bar{
+    display: none;
   }
   .nav-flex{
    grid-column: 1/2; 

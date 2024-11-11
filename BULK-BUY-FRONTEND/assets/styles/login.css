@@ -57,6 +57,9 @@
   border: 1px solid var(--clr-accent);
   border-radius: 5px;
 }
+.hambuger .bar{
+    display: none;
+  }
  .cont-fluid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -200,9 +203,8 @@ main form input[type="submit"] {
   justify-content: space-between;
 }
 .hambuger .bar{
-  display: initial;
+  display: block;
   width: 1.7rem;
-  height: 1.7rem;
   margin: 0.4rem 0.5rem;
   border: 1.5px solid var(--clr-neutral);
 }
