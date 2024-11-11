@@ -112,8 +112,7 @@ main form {
   align-items: center;
   gap: 2em;
   background-color: var(--clr-secondary);
-  color: var(--clr-neutral
-  );
+  color: var(--clr-neutral);
 }
 
 .sign-in-text {
