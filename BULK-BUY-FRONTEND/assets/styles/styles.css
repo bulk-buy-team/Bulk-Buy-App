@@ -2,82 +2,118 @@
   padding: 0rem;
   margin: 0rem;
   box-sizing: border-box;
-  font-family: Arial Sans-Serif Courier New Montserrat Noto Serif Arimo;
+  font-family: 'Montserrat';
 }
 :root {
   --clr-neutral: #F5F5F5;
   --clr-accent:#CD3301;
   --clr-primary: #DCA422;
   --clr-secondary: #E5B24E;
+  --clr-focus: #34A817;
   --padding-main: 10%;
 }
-.nav{
-  background-color: var(--clr-primary);
-  padding: 0.5rem;
-  position: fixed;
+.container{
+  position: relative;
   width: 100%;
-  z-index: 1000;
-  left: 0;
-  top: 0;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
 }
-.nav-flex{
-  display: flex;
-  justify-content: space-between;
+.sec-one{
+  width: 100%;
+  background-image: url('/assets/images/cyber-monday-retail-sales-removebg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
 }
-.brand{
-  color: var(--clr-neutral);
-  text-decoration: none;
-  font-weight: bold;
-  margin: auto 0rem;
+.hero-text{
+  z-index: 2;
 }
-.menu-item{
-  list-style-type: none;
+.hero-image img{
+  display: none;
 }
-.nav_item{
-  padding: 0.5rem 0rem;
+.hero-text h1{
+  font-size: 2rem;
+  margin: 1rem 0rem;
 }
-.nav_link{
-  text-decoration: none;
-  color: var(--clr-neutral);
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 0.4rem 1rem;
-  text-align: center;
-  border: 2px solid var(--clr-neutral);
+.hero-text h1 span{
+  color: var(--clr-primary);
+}
+.hero-text div{
+  background-color: var(--clr-secondary);
+  border: 1px solid var(--clr-secondary);
   border-radius: 5px;
+  padding: 1rem;
+  opacity: .9;
+  margin: 1rem 0rem;
 }
-.active_link{
+.hero-text p{
+  font-size: 1rem;
+  color: var(--clr-neutral);
+  font-weight: bold;
+}
+.hero-text p span{
+  font-weight: bold;
+  color: var(--clr-accent);
+}
+.hero-text button{
+  width: 70%;
+  padding: 0.5rem;
+  margin: 1rem 0rem;
+  color: var(--clr-neutral);
+  font-weight: bold;
   background-color: var(--clr-accent);
   border: 1px solid var(--clr-accent);
-  border-radius: 5px;
+  border-radius: 50px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
 }
-.hambuger .bar{
-  width: 1.7rem;
-  margin: 0.4rem 0.5rem;
-  border: 1.5px solid var(--clr-neutral);
+.hero-text button img{
+  width: 30%;
+  height: ;
 }
-
-.container{
-  padding: 1rem;
+.circle{
+  position: absolute;
+  bottom: -10em;
+  right: -12em;
+  width: 30em;
+  height: 30em;
+  border-radius: 100%;
+  background-color: var(--clr-secondary);
+  opacity: 50%;
+  z-index: -100;
 }
-
 @media(min-width: 901px){
-  .cont-fluid{
+  .container{
+    width: 100%;
+    padding: 5rem;
+  }
+  .sec-one{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-image: none;
   }
-  .hambuger .bar{
-    display: none;
+  .hero-text{
+    width: 100%;
+    grid-column: 1/2;
   }
-  .nav-flex{
-   grid-column: 1/2; 
+  .hero-image img{
+    width: 100%;
+    grid-column: 2/2;
+    display: grid;
   }
-  .menu-cont{
-    grid-column: 4/4;
-    padding-top: 0.6rem;
+  .hero-text h1{
+    font-size: 4rem;
   }
-  .menu-item{
-    display: flex;
-    justify-content: flex-end;
+  .hero-text div{
+    background-color: #fff;
+    border: 0px;
+    width: 80%;
+  }
+  .hero-text p{
+    font-size: 1.5rem;
+    color: black;
+  }
+  .hero-text button{
+   padding: 1.2rem;
+   font-size: 1.5rem;
   }
 }
