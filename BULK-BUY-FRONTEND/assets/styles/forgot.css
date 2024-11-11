@@ -178,9 +178,6 @@ input:valid{
   form{
     margin: 1rem 0rem;
   }
-  .circle{
-    z-index: 5;
-  }
   .cont-fluid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

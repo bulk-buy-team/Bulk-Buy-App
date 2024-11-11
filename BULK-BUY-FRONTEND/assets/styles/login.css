@@ -75,7 +75,8 @@
 main {
   position: relative;
   padding-inline: var(--padding-main); 
-  padding-top: 20px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
