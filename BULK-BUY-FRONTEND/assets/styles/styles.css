@@ -58,42 +58,53 @@
   margin: 0.4rem 0.5rem;
   border: 1.5px solid var(--clr-neutral);
 }
-.container{
+body{
   position: relative;
-  width: 100%;
-  padding: 2rem 1rem;
   overflow-x: hidden;
+  width: 100vw;
+}
+.cont-main{
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  padding: 2rem 0rem;
   min-height: 100vh;
 }
 .sec-one{
-  width: 100%;
-  margin: 3rem 0rem;
-  background-image: url('/assets/images/cyber-monday-retail-sales-removebg.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 75% 75%;
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 0rem 2rem ;
+  margin: 3rem 1rem;
 }
 .hero-text{
-  position: relative;
+  width: 100%;
+  position: absolute;
+  padding-top: 0rem;
   z-index: 2;
 }
 .hero-image img{
-  display: none;
+  width: 100%;
+  opacity: 20%;
 }
 .hero-text h1{
   font-size: 2rem;
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
 }
 .hero-text h1 span{
   color: var(--clr-primary);
 }
 .hero-text div{
-  background-color: var(--clr-sectondary);
-  border: 1px solid var(--clr-secotndary);
-  border-radius: 5phx;
   padding: 1rem;
   opacity: .9;
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
 }
 .hero-text p{
   font-size: 1rem;
@@ -107,7 +118,6 @@
 .hero-text button{
   width: 70%;
   padding: 0.5rem;
-  margin: 1rem 0rem;
   color: var(--clr-neutral);
   font-weight: bold;
   background-color: var(--clr-accent);
@@ -122,25 +132,33 @@
 .circle{
   position: absolute;
   top: 100px;
-  right: -12em;
+  right: -17em;
   width: 30em;
   height: 30em;
   border-radius: 100%;
   background-color: var(--clr-secondary);
   opacity: 50%;
-  z-index: 1;
+  z-index: -10;
 }
 .sec-two{
   position: relative;
-  width: 100%;
-  padding: 2rem 5rem;
-  background-color: white;
-  background-image: url('/assets/images/Innovation-bro.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 90%;
+  height: 75rem;
+  padding: 2rem 0rem;
+  margin: 3rem 0rem;
   box-shadow: 0px 1px 10px 0px var(--clr-focus);
-  z-index: 10;
+  z-index: 100;
+}
+.section-img{
+  margin: auto;
+}
+.section-img img{
+  width: 100%;
+  opacity: 20%;
 }
 .title{
   text-align: center;
@@ -150,10 +168,23 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+.grid-cont{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  padding-top: 3rem;
+  z-index: 2;
+}
 .card-cont{
   position: relative;
-  width: 100%;
-  margin: 2.5rem 0rem;
+  justify-self: center;
+  align-self: center;
+  width: 60%;
+  margin: 2rem 0rem;
   border-radius: 5px;
   padding: 2.5rem 2rem 1rem 2rem;
 }
@@ -219,9 +250,6 @@
   font-size: 0.9rem;
 }
 @media(min-width: 901px){
-  body{
-    position: relative;
-  }
   .cont-fluid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -240,28 +268,28 @@
     display: flex;
     justify-content: flex-end;
   }
-  .container{
-    position: static;
+  .cont-main{
     width: 100%;
-    padding: 5rem 10rem;
+    padding: 0rem;
   }
   .circle{
     top: 450px;
   }
   .sec-one{
+    padding-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-image: none;
-    position: static;
   }
   .hero-text{
-    width: 100%;
+    position: relative;
     grid-column: 1/2;
+  }
+  .hero-image{
+    grid-column: 2/2;
   }
   .hero-image img{
     width: 100%;
-    grid-column: 2/2;
-    display: grid;
+    opacity: 100%;
   }
   .hero-text h1{
     font-size: 4rem;
@@ -280,7 +308,15 @@
    font-size: 1.5rem;
   }
   .sec-two{
-    padding: 5rem 10rem;
+    padding: 2rem 10rem;
+    height: 34rem;
+  }
+  .section-img{
+    width: 70%;
+    height: 100%;
+  }
+  .section-img img{
+    height: 80%;
   }
   .title{
     font-size: 2rem;
@@ -298,6 +334,6 @@
     gap: 5px;
   }
   .sec-two div .card-circle{
-    left: 40%;
+    left: 35%;
   }
 }
