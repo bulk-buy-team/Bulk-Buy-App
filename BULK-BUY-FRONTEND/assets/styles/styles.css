@@ -10,6 +10,7 @@
   --clr-primary: #DCA422;
   --clr-secondary: #E5B24E;
   --clr-focus: #34A817;
+  --clr-grey: grey;
   --padding-main: 10%;
 }
 .container{
@@ -17,15 +18,18 @@
   width: 100%;
   padding: 2rem 1rem;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 .sec-one{
   width: 100%;
+  margin: 3rem 0rem;
   background-image: url('/assets/images/cyber-monday-retail-sales-removebg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75% 75%;
 }
 .hero-text{
+  position: relative;
   z-index: 2;
 }
 .hero-image img{
@@ -39,16 +43,16 @@
   color: var(--clr-primary);
 }
 .hero-text div{
-  background-color: var(--clr-secondary);
-  border: 1px solid var(--clr-secondary);
-  border-radius: 5px;
+  background-color: var(--clr-sectondary);
+  border: 1px solid var(--clr-secotndary);
+  border-radius: 5phx;
   padding: 1rem;
   opacity: .9;
   margin: 1rem 0rem;
 }
 .hero-text p{
   font-size: 1rem;
-  color: var(--clr-neutral);
+  color: black;
   font-weight: bold;
 }
 .hero-text p span{
@@ -72,19 +76,107 @@
 }
 .circle{
   position: absolute;
-  bottom: -10em;
+  top: 100px;
   right: -12em;
   width: 30em;
   height: 30em;
   border-radius: 100%;
   background-color: var(--clr-secondary);
   opacity: 50%;
-  z-index: -100;
+  z-index: 1;
+}
+.sec-two{
+  position: relative;
+  width: 100%;
+  padding: 2rem 5rem;
+  background-color: white;
+  background-image: url('/assets/images/Innovation-bro.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0px 1px 10px 0px var(--clr-focus);
+  z-index: 10;
+}
+.title{
+  text-align: center;
+  text-decoration: underline;
+  color: var(--clr-accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.card-cont{
+  position: relative;
+  width: 100%;
+  margin: 2.5rem 0rem;
+  border-radius: 5px;
+  padding: 2.5rem 2rem 1rem 2rem;
+}
+.orange-bg{
+  background-color: var(--clr-secondary);
+  border: 1px solid var(--clr-secondary);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+}
+.sec-two div .card-circle{
+  position: absolute;
+  top: -25px;
+  left: 34%;
+  width: 3.7rem;
+  height: 3.7rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 100%;
+  border: 3px solid var(--clr-neutral);
+}
+.silver{
+  background-color: #D9D9D9;
+}
+.orange{
+  background-color: var(--clr-secondary);
+}
+.num-black{
+  margin: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  padding: 0rem;t
+}
+.num-white{
+  margin: auto;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 0rem;t
+}
+.head{
+  text-align: center;
+  color: var(--clr-neutral);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.head-green{
+  text-align: center;
+  color: var(--clr-focus);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.txt{
+  text-align: center;
+  color: var(--clr-neutral);
+  font-size: 0.9rem;
+}
+.txt-green{
+  text-align: center;
+  color: var(--clr-focus);
+  font-size: 0.9rem;
 }
 @media(min-width: 901px){
   .container{
     width: 100%;
-    padding: 5rem;
+    padding: 5rem 10rem;
   }
   .sec-one{
     display: grid;
@@ -115,5 +207,25 @@
   .hero-text button{
    padding: 1.2rem;
    font-size: 1.5rem;
+  }
+  .sec-two{
+    padding: 5rem 10rem;
+  }
+  .title{
+    font-size: 2rem;
+  }
+  .head-green,.head{
+    font-size: 1.5rem;
+  }
+  .txt-green,.txt{
+    font-size: 1.1rem;
+  }
+  .grid-cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+  }
+  .sec-two div .card-circle{
+    left: 40%;
   }
 }
