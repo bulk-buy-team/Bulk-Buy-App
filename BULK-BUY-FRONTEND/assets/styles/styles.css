@@ -219,14 +219,40 @@
   font-size: 0.9rem;
 }
 @media(min-width: 901px){
+  body{
+    position: relative;
+  }
+  .cont-fluid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .hambuger .bar{
+    display: none;
+  }
+  .nav-flex{
+   grid-column: 1/2; 
+  }
+  .menu-cont{
+    grid-column: 4/4;
+    padding-top: 0.6rem;
+  }
+  .menu-item{
+    display: flex;
+    justify-content: flex-end;
+  }
   .container{
+    position: static;
     width: 100%;
     padding: 5rem 10rem;
+  }
+  .circle{
+    top: 450px;
   }
   .sec-one{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-image: none;
+    position: static;
   }
   .hero-text{
     width: 100%;
@@ -266,6 +292,7 @@
     font-size: 1.1rem;
   }
   .grid-cont{
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 5px;
