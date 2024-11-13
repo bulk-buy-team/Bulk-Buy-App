@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <View>
       <Text>Home</Text>
-      <Link href={"/signUp"}>SignUp</Link>
+      <Link href={"signUp"}>SignUp</Link>
+      <Link href={"signIn"}>SignIn</Link>
+      <Link href={"forgotPassword"}>Forgot Password</Link>
     </View>
   )
 }

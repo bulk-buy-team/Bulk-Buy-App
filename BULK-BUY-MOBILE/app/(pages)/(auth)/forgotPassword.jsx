@@ -1,12 +1,10 @@
-import { Button, KeyboardAvoidingView, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, useWindowDimensions, View } from 'react-native'
+import { Button, KeyboardAvoidingView, Pressable, ScrollView, StyleSheet, Text, TextInput, useWindowDimensions, View } from 'react-native'
 import React, { useState } from 'react'
-import { Link } from 'expo-router'
 
-const signUp = () => {
+const forgotPassword = () => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [confirmPassword, setConfirmPassword] = useState("")
   const [errors, setErrors] = useState({})
   
   const screenWidth = useWindowDimensions().width
@@ -21,10 +19,6 @@ const validateEmail = (email) => {
     let errors = {}
     if(!validateEmail(email)) errors.email = "Invalid email format"
     if(!email) errors.email = "Email required!"
-    if(password !== confirmPassword) errors.confirmPassword = "Passwords do not match"
-    if(password.length < 8) errors.password = "8 digits or more required!"
-    if(!password) errors.password = "Password required!"
-    if(!confirmPassword) errors.confirmPassword = "ConfirmPassword required!"
     
     setErrors(errors)
 
@@ -35,8 +29,6 @@ const handleSubmit = () =>{
     
     if (validateForm()) {
         setEmail("")
-        setPassword("")
-        setConfirmPassword("")
         setErrors({})
         console.log("Submitted", email, password);
     }
@@ -47,8 +39,8 @@ const handleSubmit = () =>{
     <ScrollView style={styles.container}>
       <KeyboardAvoidingView style={[styles.formContainer, {width: screenWidth > 600 ? 500 : "90%"}]}>
         <View style={styles.formHeader}>
-          <Text style={[styles.formText, {fontWeight: "bold", fontSize: 18}]}>Sign Up</Text>
-          <Text style={styles.formText}>Welcome to Bulk-Buy</Text>
+          <Text style={[styles.formText, {fontWeight: "bold", fontSize: 18}]}>Forgot Password</Text>
+          <Text style={styles.formText}>Enter your email address below, and we’ll send you a link to reset your password.</Text>
         </View>
         <View style={styles.inputContainer}>
             <Text style={styles.label}>Email</Text>
@@ -63,47 +55,22 @@ const handleSubmit = () =>{
             />
             {errors.email && <Text style={styles.error}>{errors.email}</Text>}
         </View>
-        <View style={styles.inputContainer}>
-            <Text style={styles.label}>password</Text>
-            <TextInput
-                style={styles.input}
-                value={password}
-                onChangeText={setPassword}
-                placeholder='Enter password'
-                autoCorrect={false}
-                autoCapitalize='none'
-                secureTextEntry
-            />
-            {errors.password && <Text style={styles.error}>{errors.password}</Text>}
-        </View>
-        <View style={styles.inputContainer}>
-            <Text style={styles.label}>ConfirmPassword</Text>
-            <TextInput
-                style={styles.input}
-                value={confirmPassword}
-                onChangeText={setConfirmPassword}
-                placeholder='Enter ConfirmPassword'
-                autoCorrect={false}
-                autoCapitalize='none'
-            />
-            {errors.confirmPassword && <Text style={styles.error}>{errors.confirmPassword}</Text>}
-        </View>
         <Pressable
           style={styles.btn}
           onPress={handleSubmit}
         >
-          <Text style={styles.formText}>Sign Up</Text>
+          <Text style={styles.formText}>Submit</Text>
         </Pressable>
-        <View style={styles.formHeader}>
-          <Text style={styles.formText}>Already have an account?</Text>
-          <Link href={"signIn"} style={[styles.formText, {textDecorationLine: 'underline'}]}>Sign In</Link>
-        </View>
+        {/* <View style={styles.formHeader}>
+          <Text style={styles.formText}>Don't have an account?</Text>
+          <Link href={"signUp"} style={[styles.formText, {textDecorationLine: 'underline'}]}>Sign Up</Link>
+        </View> */}
       </KeyboardAvoidingView>
     </ScrollView>
   )
 }
 
-export default signUp
+export default forgotPassword
 
 const styles = StyleSheet.create({
   container: {
@@ -145,7 +112,7 @@ input: {
   backgroundColor: "#F6F6F6",
   padding: 5,
   color: "grey",
-  borderWidth: 0,              // Removes the border
+  borderWidth: 0,
   borderColor: 'transparent', 
 },
 btn: {
