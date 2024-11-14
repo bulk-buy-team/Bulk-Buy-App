@@ -22,7 +22,8 @@ if (isset($_POST['resetsubmit'])) {
     $resetresult = $resultforReset->fetch_assoc();
     if ($resetresult) {
         $_SESSION['user'] = $resetresult;
-        header("location:../reset.html");
+    echo "successful";
+        // header("location:../reset.html");
      } 
      else{
         echo "nusuccessful";

@@ -16,20 +16,20 @@ if ($conn->connect_error) {
 
 if (isset ($_POST["submit"])) {
     
-    if ($_POST ["password"] == $_POST ["password2"]) {
-        $firstname = htmlspecialchars($_POST ["firstname"]);
-        $lastname = htmlspecialchars($_POST ["lastname"]);
+    if ($_POST ["password"] == $_POST ["comfirmPasswrd"]) {
+        $firstname = htmlspecialchars($_POST ["firstName"]);
+        $lastname = htmlspecialchars($_POST ["lastName"]);
         $email = htmlspecialchars($_POST ["email"]);
-        $username = htmlspecialchars($_POST ["username"]);
         $password = $_POST ["password"];   
 
         // SQL query to insert data
-        $stmt = $conn->prepare("INSERT INTO user (firstname, lastname, email, username, password) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss",$firstname, $lastname, $email, $username, $password);
+        $stmt = $conn->prepare("INSERT INTO user (firstname, lastname, email, password) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss",$firstname, $lastname, $email, $password);
         $stmt->execute();
     
         if ($stmt) {
-            header("location:../login.html");
+        //   echo "successful";
+            header("location:../BULK-BUY-FRONTEND/login.html");
         } else {
             echo "Error ";
         }
