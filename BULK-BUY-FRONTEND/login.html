@@ -5,33 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="assets/styles/login.css">
-<script src="https://kit.fontawesome.com/613df4c120.js" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- <script src="https://kit.fontawesome.com/613df4c120.js" crossorigin="anonymous"></script> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
   <title>Login</title>
 </head>
 <body>
-  <nav class="nav navbar-expand-lg">
-    <div class="container-fluid cont-fluid">
-      <div class="nav-flex">
-        <a class="brand" href="#">BULK-BUY</a>
-        <span class="hambuger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </span>
-      </div>
-      <div class="collapse navbar-collapse menu-cont" id="navbarTogglerDemo01">
-        <ul class="menu-item">
-          <li class="nav_item">
-            <a class="nav_link" href="signup.html">Sign up</a>
-          </li>
-          <li class="nav_item">
-            <a class="nav_link active_link" aria-current="page" href="#">Sign in</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <header>
+    <nav>
+      <a href="index.html" class="logo"><img src="assets/images/logo.PNG" alt=""></a>
+      <ul>
+        <!-- <form method="" class="search">
+          <input type="text" name="search" id="search">
+          <div class="search-icon">
+            <img src="assets/images/search1.png" alt="">
+          </div>
+        </form> -->
+        <li><a href="signup.html" aria-current="page">Sign Up</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+      <span class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </span>
+    </nav>
+  </header>
 
   <main>
     <form action="">
@@ -43,31 +41,44 @@
       <div class="input-fields">
         <div class="input-container">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="example@email.com">
+          <input type="email" 
+          id="email" 
+          placeholder="example@gmail.com" 
+          required="true"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          name="email">
         </div>
   
         <div class="input-container">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password">
+          <input type="password" 
+          id="password" 
+          placeholder="password" 
+          required="true" 
+          name="password" minlength="8" maxlength="16">
         </div>
-        <a href="forgot.html" class="forgot-password">Forgot Password?</a>
+        <a href="#" class="forgot-password">Forgot Password?</a>
       </div>
       
       <div class="submit-text">
         <input type="submit" value="Sign In">
         <span>Don't have an account?</span>
-        <span><a href="signup.html">Create one</a></span>
+        <span><a href="#">Create one</a></span>
       </div>
 
     </form>
     <div class="hero-image">
       <img src="assets/images/cyber-monday-retail-sales-removebg.png" alt="">
     </div>
-    <div class="circle"></div>
+    <span class="circle-container">
+      <div class="circle"></div>
+    </span>
   </main>
 
+
+  
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<script src="scripts/login.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>  -->
+<script src="assets/scripts/login.js"></script>
 </body>
 </html>

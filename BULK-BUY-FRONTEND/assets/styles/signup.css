@@ -70,16 +70,16 @@
 }
 .form-wrapper{
   background-color: var(--clr-secondary);
-  border: 1px solid var(--clr-secondary);
+  /* border: 10px solid var(--clr-secondary); */
   border-radius: 5px;
-  width: 80%;
+  max-width: 300px;
   position: absolute;
   justify-self: center;
   align-self: center;
   z-index: 2;
   opacity: .9;
   margin-top: 10rem;
-  padding: 1.5rem 1.3rem;
+  padding: 1.5rem 2rem;
 }
 .header{
   text-align: center;
@@ -133,8 +133,9 @@ input:focus{
   border: 2px solid red;
 }
 input:valid{
-  border: 2px solid green; */
-}
+  border: 2px solid green;
+} */
+ 
 input:placeholder{
   color: grey;
   font-size: 0.9rem;
@@ -152,7 +153,7 @@ input:placeholder{
 .hero-image img {
   width: 100%;
 }
-@media(min-width: 901px){
+@media(min-width: 620px){
   .cont-main{
    grid-template-columns: 1fr 1fr;
    padding: 5rem;
