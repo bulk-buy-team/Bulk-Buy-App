@@ -1,24 +1,32 @@
 import { Stack } from 'expo-router';
-import { Pressable, Text } from 'react-native';
+import { Pressable, SafeAreaView, StyleSheet, Text } from 'react-native';
 
 export default function RootLayout() {
   return (
-    <Stack
+    <SafeAreaView style={styles.container}>
+      <Stack
       screenOptions={{
         headerStyle: {
           backgroundColor: '#DCA422',
         },
-        headerTintColor: '#F6F6F6',
+        headerTintColor: '#FFF',
+        headerTitle: () => null,
         headerTitleStyle: {
           fontWeight: 'bold',
         },
-        headerRight: ()=>(
-            <Pressable onPress={()=>alert("Menu button pressed")} >
-              <Text style={{fontSize: 20, color: "#CD3301"}}>Menu</Text>
-            </Pressable>
-          )
-      }}>
-      <Stack.Screen name="index" />
-    </Stack>
+        headerLeft: () => (
+          <Pressable onPress={() => alert("Menu button pressed")}>
+            <Text style={{ fontSize: 20, color: "#CD3301" }}>Logo</Text>
+          </Pressable>
+        ),
+      }}
+    />
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  }
+})
