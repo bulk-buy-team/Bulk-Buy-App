@@ -9,6 +9,7 @@ const Home = () => {
       <Link href={"signUp"}>SignUp</Link>
       <Link href={"signIn"}>SignIn</Link>
       <Link href={"forgotPassword"}>Forgot Password</Link>
+      <Link href={"verifyToken"}>Verify Token</Link>
     </View>
   )
 }
