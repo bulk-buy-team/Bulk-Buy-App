@@ -10,6 +10,10 @@
   --clr-primary: #DCA422;
   --clr-secondary: #E5B24E;
   --clr-focus: #34A817;
+<<<<<<< HEAD
+=======
+  --padding-main: 10%;
+>>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
 }
 .nav{
   background-color: var(--clr-primary);
@@ -58,6 +62,7 @@
 }
 .cont-main{
   width: 100%;
+<<<<<<< HEAD
   height: 100vh;
   display: block;
   position: relative;
@@ -69,6 +74,17 @@
     background-position: center;
     background-size: 75% 40%;
   /* height: 100vh; */
+=======
+  padding-inline: var(--padding-main); 
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+>>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
 }
 .form-wrapper{
   padding: 3rem 1.3rem;
@@ -76,9 +92,17 @@
   border: 1px solid var(--clr-secondary);
   border-radius: 5px;
   width: 80%;
+<<<<<<< HEAD
   z-index: 10;
   opacity: .9;
   margin: auto;
+=======
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  z-index: 2;
+  opacity: .9;
+>>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
 }
 .header{
   text-align: center;
@@ -151,6 +175,7 @@ input:valid{
   border-radius: 100%;
   background-color: var(--clr-secondary);
   opacity: 50%;
+<<<<<<< HEAD
   z-index: -500;
 }
 @media(min-width: 901px){
@@ -185,13 +210,38 @@ input:valid{
     padding: 5rem 2rem;
     border-radius: 3px;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+=======
+}
+.hero-image img {
+  width: 100%;
+}
+@media(min-width: 901px){
+  .cont-main{
+   grid-template-columns: 1fr 1fr;
+   padding: 5rem;
+  }
+  .form-wrapper{
+    padding: 5rem 2rem;
+    position: relative;
+    margin: 0rem;
+    border-radius: 3px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
+    grid-column: 1/2;
+    opacity: 100%;
+  }
+  .hero-image img {
+    grid-column: 2/2;
+>>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
   }
   form{
   margin: 1rem 0rem;
   }
+<<<<<<< HEAD
   .circle{
     z-index: 5;
   }
+=======
+>>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
   .cont-fluid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
