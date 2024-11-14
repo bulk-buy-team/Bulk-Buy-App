@@ -12,67 +12,6 @@
   --clr-accent:#CD3301;
   --clr-primary: #DCA422;
   --clr-secondary: #E5B24E;
-<<<<<<< HEAD
-  --padding-main: 10%;
-}
-
-.nav{
-  background-color: var(--clr-primary);
-  padding: 0.5rem;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-}
-.nav-flex{
-  display: flex;
-  justify-content: space-between;
-}
-.brand{
-  color: var(--clr-neutral);
-  text-decoration: none;
-  font-weight: bold;
-  margin: auto 0rem;
-}
-.menu-item{
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-}
-.nav_item{
-  padding: 0.5rem 0rem;
-}
-.nav_link{
-  text-decoration: none;
-  color: var(--clr-neutral);
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 0.4rem 1rem;
-  text-align: center;
-  border: 2px solid var(--clr-neutral);
-  border-radius: 5px;
-}
-.active_link{
-  background-color: var(--clr-accent);
-  border: 1px solid var(--clr-accent);
-  border-radius: 5px;
-}
-.hambuger .bar{
-    display: none;
-  }
- .cont-fluid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .nav-flex{
-   grid-column: 1/2; 
-  }
-  .menu-cont{
-    grid-column: 4/4;
-    padding-top: 0.6rem;
-  }
-=======
   --clr-focus: #34A817;
   --padding-main: 10%;
 }
@@ -145,7 +84,6 @@ nav li a {
 nav img {
   width: 1em;
 }
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
 
 main {
   position: relative;
@@ -153,18 +91,10 @@ main {
   padding-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-<<<<<<< HEAD
-  align-items: center;
-  align-content: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
-=======
   /* align-items: center; */
   /* align-content: center; */
   min-height: 85vh;
   overflow-x: hidden;
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
 /* 
   background: url(../images/55853.jpg.png);
   background-size: cover; */
@@ -178,19 +108,8 @@ main::-webkit-scrollbar{
   width: 100%;
 }
 
-<<<<<<< HEAD
-form a{
-  text-decoration: none;
-  color: var(--clr-neutral);
-}
-
-main form {
-  width: 80%;
-  border-radius: 5px;
-=======
 main form {
   border-radius: 10px;
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
   max-width: 420px;
   padding: 2.5em 2.5em;
   display: flex;
@@ -198,10 +117,6 @@ main form {
   justify-content: center;
   align-items: center;
   gap: 2em;
-<<<<<<< HEAD
-=======
-
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
   background-color: var(--clr-secondary);
   color: var(--clr-neutral
   );
@@ -228,14 +143,10 @@ main input {
   outline: none;
   border: none;
   height: 3em;
-<<<<<<< HEAD
-  padding: .7em 1em;
-=======
   padding: .7em 1.5em;
   border-radius: 5px;
 
   background-color: var(--clr-neutral);
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
 }
 
 .input-fields {
@@ -248,11 +159,6 @@ label {
   margin-bottom: 5px;
 }
 
-<<<<<<< HEAD
-main .input-container input {
-  border-radius: 3px;
-  background-color: var(--clr-neutral);
-=======
 input:focus{
   outline: none;
   border: 2px solid var(--clr-focus);
@@ -261,7 +167,6 @@ input:focus{
 input::placeholder {
   color: grey;
   font-size: 0.9rem;
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
 }
 
 .forgot-password {
@@ -274,14 +179,6 @@ main form input[type="submit"] {
   width: 100%;
   padding: .5em 1em;
   margin-bottom: 10px;
-<<<<<<< HEAD
-  border: none;
-  border-radius: 50px;
-  outline: none;
-  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.19);
-=======
-
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
   background-color: var(--clr-accent);
   color: var(--clr-neutral);
 }
@@ -299,12 +196,6 @@ main form input[type="submit"] {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
-.circle {
-  position: absolute;
-  bottom: -10em;
-  right: -12em;
-=======
 .circle-container {
   overflow-x: hidden;
   width: 20em;
@@ -315,38 +206,10 @@ main form input[type="submit"] {
 }
 
 .circle {
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
   width: 30em;
   height: 30em;
   border-radius: 100%;
   background-color: var(--clr-secondary);
-<<<<<<< HEAD
-  opacity: 50%;
-}
-
-@media screen and (max-width: 620px) {
-.nav-flex{
-  display: flex;
-  justify-content: space-between;
-}
-.hambuger .bar{
-  display: block;
-  width: 1.7rem;
-  margin: 0.4rem 0.5rem;
-  border: 1.5px solid var(--clr-neutral);
-}
-.menu-item{
-  display: block;
-  justify-content: flex-end;
-}
-.cont-fluid{
-    display: block;
-  }
-  main {
-    grid-template-columns: 1fr;
-    position: relative;
-    height: 100vh;
-=======
   opacity: 50%; 
 }
 
@@ -399,7 +262,6 @@ main form input[type="submit"] {
     position: relative;
 
   
->>>>>>> d2ef83b6fcc4112ff5ca112755c5bdd7a3e70c5e
   }
   
   main form {

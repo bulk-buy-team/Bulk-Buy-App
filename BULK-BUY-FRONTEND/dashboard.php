@@ -1,8 +1,8 @@
 <?php
-session_start();
-if (!isset($_SESSION["user1"])) {
-    header("location:../BULK-BUY-FRONTEND/login.html");
-}
+// session_start();
+// if (!isset($_SESSION["user1"])) {
+//     header("location:../BULK-BUY-FRONTEND/login.html");
+// }
 
 $user = $_SESSION['user1'];
 $user_id = $user['username'];
