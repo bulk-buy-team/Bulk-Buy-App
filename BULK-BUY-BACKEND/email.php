@@ -13,9 +13,23 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+    $otp = rand(1000, 9999); 
+    $_SESSION['otp'] = $otp; 
+    $_SESSION['otp_expiry'] = time() + 300; 
 
-if (isset($_POST['resetsubmit'])) {
+if (isset($_POST['submit'])) {
     $email = htmlspecialchars($_POST ["email"]);
+
+    
+    $queryforlogin = "SELECT * FROM user WHERE email = '$email'";
+    $result = $conn->query($queryforlogin);
+    $emailresult = $result->fetch_assoc();     
+    $_SESSION['emailresult'] = $emailresult;
+    
+    if (isset($_SESSION['otp']) && $emailresult) {
+        echo "successful";
+        header("location:../BULK-BUY-FRONTEND/otp1.php");
+
 
     $queryforReset = "SELECT * FROM user WHERE email = '$email'";
     $resultforReset = $conn->query($queryforReset);
@@ -24,13 +38,13 @@ if (isset($_POST['resetsubmit'])) {
         $_SESSION['user'] = $resetresult;
     echo "successful";
         // header("location:../reset.html");
+
      } 
      else{
         echo "nusuccessful";
      }
 
+
 }
-
-
 
 ?>

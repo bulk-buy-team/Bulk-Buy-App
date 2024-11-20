@@ -240,6 +240,7 @@ button img {
 .container h2 {
   text-decoration: underline;
   color: var(--clr-primary);
+
 }
 
 .container-flex div {

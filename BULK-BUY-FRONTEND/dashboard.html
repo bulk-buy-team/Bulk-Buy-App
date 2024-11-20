@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/styles/dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/images/logo.PNG" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My cart</a></li>
+                <li><a href="#">Order History</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <header>
+            <div class="home">
+                <a href="#">Home</a>
+                <a href="#"><img src="assets/images/bell.png" alt="notification"></a>
+            </div>
+            <div class="search-bar">
+                <input type="search" name="search" id="search">
+            </div>
+        </header>
+        <div class="main-container">
+            <div class="welcome-user">
+                <div class="user">
+                    <img src="assets/images/profile-circle.svg" alt="">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2>Bag of Beans | Bag of Wheat</h2>
+                <span>Discount: 25%</span>
+                <button>Order Now</button>
+            </div>
+
+
+            <div class="product-list">
+                <!-- Garri Product Card -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/menu-1.svg" alt="">
+                        <img src="assets/images/garri.PNG" alt="Garri">
+                        <span>N88,000</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h2>Garri: </h2> 110 Units
+                        </div>
+                        <div>1 unit: N800.00</div>
+                        <div class="cart-quantity">
+                            <button>Add to Cart</button>
+                            <button>-</button>
+                            <input type="number">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <!-- Noodles Product Card -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/menu-1.svg" alt="">
+                        <img src="assets/images/noodles.PNG" alt="Noodles">
+                        <span>N88,000</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h2>Noodles: </h2> 45 Units
+                        </div>
+                        <div>1 unit: N1000.00</div>
+                        <div class="cart-quantity">
+                            <button>Add to Cart</button>
+                            <button>-</button>
+                            <input type="number">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis">
+                <div>
+                    <h2>General Analysis: Rice</h2>
+                    <div>Total number of people who contributed</div>
+                </div>
+
+                <input type="range" name="analysis-bar" id="analysis-bar" value="90">
+                <div>
+                    <div>
+                        <img src="assets/images/profile-circle.svg" alt="">
+                        <img src="assets/images/profile-circle.svg" alt="">
+                        <img src="assets/images/profile-circle.svg" alt="">
+                    </div>
+
+                    <a>
+                        View details
+                    </a>
+                </div>
+
+            </div>
+
+
+        
+        </div>
+    </main>
+</body>
+</html>
