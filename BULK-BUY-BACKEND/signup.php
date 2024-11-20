@@ -16,30 +16,24 @@ if (mysqli_connect_errno()) {
 } 
 
 if (isset ($_POST["submit"])) {
+    $firstname = htmlspecialchars($_POST ["firstName"]);
+    $lastname = htmlspecialchars($_POST ["lastName"]);
     $email = htmlspecialchars($_POST ["email"]);
     $password = $_POST ["password"];    
 
     // SQL query to insert data
-    $queryforlogin = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
-       $result = $conn->query($queryforlogin);
-        $loginresult = $result->fetch_assoc();
-
-        $role = $loginresult['role'];
-
-    if ($loginresult && $role) {
-            $_SESSION['user1'] = $loginresult;
-            header("location:../BULK-BUY-FRONTEND/admindashboard.php");
-        } else {
-         echo "Error "; 
-         header("location:../BULK-BUY-FRONTEND/dashboard.php");
-       }
-    // Close connection
+    $stmt = $conn->prepare("INSERT INTO user (firstname, lastname, email, password) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $firstname, $lastname, $email, $password);
+    $stmt->execute();
+    
+    if ($stmt) {
+        header("location:../BULK-BUY-FRONTEND/login.html");
+     } else {
+         echo "Error ";
+     }
+ 
+     // Close connection
      $conn->close();
+ 
 }
-else {
-    echo 'error loging in';
-  }
-$conn->close();
 ?>
-
-
