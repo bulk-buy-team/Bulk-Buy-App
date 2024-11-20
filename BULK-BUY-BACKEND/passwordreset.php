@@ -14,10 +14,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$user = $_SESSION['user'];
+$user = $_SESSION['emailresult'];
         
 
-if (isset($_POST['update'])) {
+if (isset($_POST['submit'])) {
     if ($_POST ["password1"] == $_POST ["password2"]) {
         // Get values from form inputs
         $id = $user['user_id'];
@@ -30,7 +30,7 @@ if (isset($_POST['update'])) {
         $stmt->execute();
         // Execute the query
         if ($stmt) {
-            header("location:../login.html");
+            header("location:../BULK-BUY-FRONTEND/login.html");
         } 
         else {
             echo "Error updating record: " . $conn->error;

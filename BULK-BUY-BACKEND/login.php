@@ -15,27 +15,31 @@ if (mysqli_connect_errno()) {
     die("Connection failed: " . mysqli_connect_error());
 } 
 
-if (isset($_POST["submit"])) {
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    
-    // Prepare and execute the query
-    $stmt = $conn->prepare("SELECT * FROM user WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $loginresult = $result->fetch_assoc();
+if (isset ($_POST["submit"])) {
+    $email = htmlspecialchars($_POST ["email"]);
+    $password = $_POST ["password"];    
 
-    // Verify password
-    if ($loginresult && password_verify($password, $loginresult['password'])) {
-        $_SESSION['user1'] = $loginresult; // Uncomment if you want to store user session
-        header("location:../BULK-BUY-FRONTEND/dashboard.php");
-    } else {
-        echo "Invalid username or password";
-    }
-    
-    $stmt->close();
+    // SQL query to insert data
+    $queryforlogin = "SELECT * FROM user WHERE email = '$email' AND password = '$password'";
+       $result = $conn->query($queryforlogin);
+        $loginresult = $result->fetch_assoc();
+
+        $role = $loginresult['role'];
+
+    if ($loginresult && $role) {
+            $_SESSION['user1'] = $loginresult;
+            header("location:../BULK-BUY-FRONTEND/admindashboard.php");
+        } else {
+         echo "Error "; 
+         header("location:../BULK-BUY-FRONTEND/dashboard.php");
+       }
+    // Close connection
+     $conn->close();
 }
-
+else {
+    echo 'error loging in';
+  }
 $conn->close();
 ?>
+
+

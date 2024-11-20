@@ -1,13 +1,13 @@
 <?php
-// session_start();
-// if (!isset($_SESSION["user1"])) {
-//     header("location:../BULK-BUY-FRONTEND/login.html");
-// }
+session_start();
+if (!isset($_SESSION["user1"])) {
+    header("location:../BULK-BUY-FRONTEND/login.html");
+}
 
 $user = $_SESSION['user1'];
-$user_id = $user['username'];
-$lastname = $user['lastname'];
+$user_id = $user['user_id'];
 $firstname = $user['firstname'];
+$lastname = $user['lastname'];
 $email = $user['email'];
 
 ?>
@@ -28,7 +28,7 @@ h1,form{
 <?php  echo "wellcome to bulk buy MR " . $firstname . ' ' . $lastname?>
 
 
-<form action="../backend/paystack.php" method="POST"> 
+<form action="../BULK-BUY-BACKEND/paystack.php" method="POST"> 
   <input type="hidden" name="user_email" value="<?php echo $email; ?>"> 
   <input type="hidden" name="user_email" value="<?php echo $firstname; ?>"> 
   <input type="hidden" name="user_email" value="<?php echo $lastname; ?>"> 
@@ -38,6 +38,6 @@ h1,form{
   <button type="submit" name="pay_now" id="pay-now" title="Pay now">Pay now</button>
 </form>
 
-<a href="../backend/logout.php">log out</a>
+<a href="../BULK-BUY-BACKEND/logout.php">log out</a>
 </body>
 </html>
