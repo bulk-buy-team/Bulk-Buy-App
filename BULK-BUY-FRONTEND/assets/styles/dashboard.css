@@ -50,6 +50,15 @@ body {
 }
 
 header img {
-    /* width: 100%;
-     */
+    width: 1.5em;
+}
+
+.home {
+    display: flex;
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 620px) {
+
 }
