@@ -27,7 +27,6 @@ nav {
   grid-template-columns: 1fr 1fr;
   row-gap: 1em;
   padding-block: 1em;
-  
   /* justify-items: space-between; */
   align-items: center;
   justify-content: space-between;
@@ -330,3 +329,4 @@ button img {
     background-color: var(--clr-secondary);
     backdrop-filter: blur(20px); */
   }
+
