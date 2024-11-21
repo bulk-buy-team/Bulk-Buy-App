@@ -1,0 +1,71 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 30px;
+  margin-top: 80px;
+  height: 100%;
+  padding: 110px 0 40px 0;
+}
+
+.card {
+  padding: 50px 0 50px 0;
+  background-color:white;
+  border-radius: 15px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logoSection h1{
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #d0430e;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px;
+  margin-left: 5px;
+  color: black;
+}
+
+.createAccountBtn {
+  background-color: #d0430e;
+  color: white;
+  margin-bottom: 0.5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+  width: 80%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loginBtn {
+  background-color: #d0430e;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+  width: 80%;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+p{
+  text-align: center;
+}
+.btn {
+  text-align: center;
+  font-size: 1.5rem;
+}
+img{
+  height: 70px;
+  width: 200px;
+}
