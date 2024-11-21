@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -24,27 +23,10 @@ $lastname = $user['lastname'];
 $firstname = $user['firstname'];
 $email = $user['email'];
 
-// Save this as callback.php
-<?php
-
-session_start();
-$user = $_SESSION['user1'];
-$user_id = $user['username'];
-$lastname = $user['lastname'];
-$firstname = $user['firstname'];
-$email = $user['email'];
-$amount = $_POST['amount'];
-
-
-
   // Set the Paystack verify URL and secret key
   $reference = $_GET['reference'];
   $verify_url = "https://api.paystack.co/transaction/verify/" . $reference;
-
   $secret_key = "sk_test_c21a76b9972ce999583b985939e965fe437ca283";
-
-  $secret_key = "sk_test_244602ad2efb57ce7ce95602619a998dd658faed";
-
 
   // Initialize cURL for verification
   $ch = curl_init();
@@ -61,7 +43,6 @@ $amount = $_POST['amount'];
 
   // Handle verification result
   $response = json_decode($result);
-
 //   print_r($response); // Display the entire response to understand its structure
     if ($response && $response->data->status === 'success' || $response->data->status !== 'success') {
         $status = $response->data->status;
@@ -87,11 +68,6 @@ $amount = $_POST['amount'];
         echo "database preparation failed";
     }
    
-
-  if ($response && $response->data->status === 'success') {
-    echo "Payment verified! Thank you." . ' '. $firstname;
-    // Deliver product or update database here
-
   } else {
     echo "Payment verification failed. Please try again.";
   }
