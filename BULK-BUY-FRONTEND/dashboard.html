@@ -7,32 +7,42 @@
     <link rel="stylesheet" href="assets/styles/dashboard.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <img src="assets/images/logo.PNG" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">My cart</a></li>
-                <li><a href="#">Order History</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </nav>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="assets/images/logo.PNG" alt="">
     </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My cart</a></li>
+        <li><a href="#">Order History</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="mobile-navbar">
+    <nav>
+      <ul>
+        <li class="Home">home</li>
+        <li class="cart">cart</li>
+        <li class="history">History</li>
+        <li class="settings">Settings</li>
+      </ul>
+    </nav>
+  </div>
     <main>
-        <header>
-            <div class="home">
-                <a href="#">Home</a>
-                <a href="#"><img src="assets/images/bell.png" alt="notification"></a>
-            </div>
-            <div class="search-bar">
-                <input type="search" name="search" id="search" placeholder="Search">
-            </div>
-        </header>
+      <header>
+      <div class="home">
+        <a href="#" class="page-title">Home</a>
+        <a href="#"><img src="assets/images/bell.png" alt="notification"></a>
+      </div>
+      <div class="search-bar">
+        <input type="search" name="search" id="search">
+      </div>
+    </header>
         <div class="main-container">
             <div class="welcome-user">
                     <img src="assets/images/profile-circle.svg" alt="">
@@ -143,10 +153,7 @@
                 </div>
 
             </div>
-
-
-        
-        </div>
+  </div>
     </main>
     <script src="assets/scripts/dashboard.js"></script>
 </body>

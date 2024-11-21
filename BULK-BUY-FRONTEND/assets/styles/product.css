@@ -6,50 +6,80 @@
 }
 
 :root {
-  --clr-neutral: #F5F5F5;
-  --clr-accent:#CD3301;
-  --clr-primary: #DCA422;
-  --clr-secondary: #E5B24E;
-  --clr-focus: #34A817;
-  --padding-main: 10%;
+    --clr-neutral: #F5F5F5;
+    --clr-accent:#CD3301;
+    --clr-primary: #DCA422;
+    --clr-secondary: #E5B24E;
+    --clr-focus: #34A817;
+    --padding-main: 10%;
+    --padding-min: 1em;
+    --padding-btn: 5px 10px;
+    --margin-min: 1em;
+    --border-radius-btn: 7px;
+    --border-radius-card: 10px;
 }
+  
+.sidebar a {
+    text-decoration: none;
+    color: var(--clr-neutral);
+}
+li {
+    list-style: none;
+    border-bottom: thin solid var(--clr-neutral);
+    padding-block: 15px;
+}
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+.logo img {
+    width: 100%;
+}
+body {
+    display: flex;
+}
+.sidebar {
+    padding: 50px;
+    background-color: var(--clr-primary);
+    min-height: 100vh;
+    width: 40vw;
+}
+.sidebar a {
+    font-size: .8em;
+    /* font-weight: bold; */
+}
+main {
+    width: 100%;
+    padding: 50px 150px;
+}
+header img {
+    width: 1em;
+}
+.home {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--margin-min);
+}
+.home a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+input[type="search"] {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: lightgrey;
+    border-radius: 50px;
+    padding: .5em 1.2em;
+}
+
 
 .mobile-navbar{
   display: none;
-}
-a {
-  text-decoration: none;
-  color: #fff;
-}
-li {
-  list-style: none;
-  border-bottom: thin solid #fff;
-  padding-block: 15px;
-}
-.logo {
-  width: 150px;
-  margin-bottom: 10px;
-}
-.logo img {
-  width: 100%;
-}
-body {
-  display: flex;
-}
-.sidebar {
-  padding: 50px;
-  background-color: var(--clr-primary);
-  min-height: 100vh;
-}
-.sidebar a {
-  font-size: .8em;
-  /* font-weight: bold; */
-}
-header img {
-  width: 1.5em;
-}
-.home {
-  display: flex;
 }
 /* main{
   width: 100%;
@@ -59,7 +89,7 @@ header img {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 15px;
   padding: 1rem;
 }
 .product-card{
@@ -102,6 +132,15 @@ header img {
 
 /* Mobile View */
 @media screen and (max-width: 620px) {
+  :root {
+    font-size: 12px;
+  }
+  .sidebar {
+    display: none;
+  }
+  main{
+    padding: 20px;
+  }
   body {
     display: block;
   }
