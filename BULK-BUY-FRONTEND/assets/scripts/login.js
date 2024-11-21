@@ -1,4 +1,4 @@
-const form = document.getElementById('form')
+const form = document.querySelector('form')
 const submit = document.querySelector('.submit')
 const comfirmPasswrd = document.getElementById('comfirmPasswrd')
 
@@ -24,8 +24,11 @@ comfirmPasswrd.addEventListener('keydown', (e) => {
 })
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault()
+  e.preventDefault();
 })
+
+
+
 
 submit.addEventListener('submit', (e) => {
   const formData = new FormData(form);
@@ -34,7 +37,7 @@ submit.addEventListener('submit', (e) => {
   let email = formData.get('email');
   let password = formData.get('password');
   let confirmpswrd = formData.get('comfirmPasswrd');
-  cons
+
   if(confirmPswrd === password){
     axios.post('/endpoint',{
       firstname: firstName,

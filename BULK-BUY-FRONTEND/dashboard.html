@@ -35,14 +35,18 @@
         </header>
         <div class="main-container">
             <div class="welcome-user">
-                <div class="user">
                     <img src="assets/images/profile-circle.svg" alt="">
-                </div>
+                    <div class="salutation">
+                        <h3>Welcome Emmanuel!</h3>
+                        <span>Hi! Welcome back, you've been missed.</span>
+                    </div>
             </div>
 
             <div class="content-container">
-                <h2>Bag of Beans | Bag of Wheat</h2>
-                <span>Discount: 25%</span>
+                <div class="text">
+                    <h3>Bag of Beans | Bag of Wheat</h3>
+                    <span>Discount: 25%</span>
+                </div>
                 <button>Order Now</button>
             </div>
 
@@ -51,41 +55,61 @@
                 <!-- Garri Product Card -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/menu-1.svg" alt="">
                         <img src="assets/images/garri.PNG" alt="Garri">
+                        <img src="assets/images/menu-1.svg" alt="" class="menu-icon">
                         <span>N88,000</span>
                     </div>
                     <div class="product-details">
                         <div>
-                            <h2>Garri: </h2> 110 Units
+                            <h2>Garri: </h2> <span class="unit-number">110 Units</span>
                         </div>
                         <div>1 unit: N800.00</div>
                         <div class="cart-quantity">
                             <button>Add to Cart</button>
                             <button>-</button>
-                            <input type="number">
+                            <input type="number" name="no-of-units" value="6">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garri Product Card -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/garri.PNG" alt="Garri">
+                        <img src="assets/images/menu-1.svg" alt="" class="menu-icon">
+                        <span>N88,000</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h2>Garri: </h2> <span class="unit-number">110 Units</span>
+                        </div>
+                        <div>1 unit: N800.00</div>
+                        <div class="cart-quantity">
+                            <button>Add to Cart</button>
+                            <button>-</button>
+                            <input type="number" name="no-of-units" value="5">
                             <button>+</button>
                         </div>
                     </div>
                 </div>
     
-    
                 <!-- Noodles Product Card -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="assets/images/menu-1.svg" alt="">
                         <img src="assets/images/noodles.PNG" alt="Noodles">
+                        <img src="assets/images/menu-1.svg" alt="" class="menu-icon">
                         <span>N88,000</span>
                     </div>
                     <div class="product-details">
                         <div>
-                            <h2>Noodles: </h2> 45 Units
+                            <h2>Noodles: </h2> <span class="unit-number">45 Units</span>
                         </div>
                         <div>1 unit: N1000.00</div>
                         <div class="cart-quantity">
                             <button>Add to Cart</button>
                             <button>-</button>
-                            <input type="number">
+                            <input type="number" name="no-of-units" value="9">
                             <button>+</button>
                         </div>
                     </div>
@@ -98,13 +122,20 @@
                     <div>Total number of people who contributed</div>
                 </div>
 
-                <input type="range" name="analysis-bar" id="analysis-bar" value="90">
-                <div>
+                <div class="analysis-container">
+                    <input type="range" name="analysis-bar" id="analysis-bar" value="90" oninput="analysisValue.value = value + '%'">
+                    <output id="analysisValue">90%</output>
+                </div>
+                
+                <div class="analysis-container">
                     <div>
-                        <img src="assets/images/profile-circle.svg" alt="">
-                        <img src="assets/images/profile-circle.svg" alt="">
-                        <img src="assets/images/profile-circle.svg" alt="">
+                        <div class="buyer-images">
+                            <img src="assets/images/profile-3.png" alt="">
+                            
+                            <div>+5 Members</div>
+                        </div>
                     </div>
+
 
                     <a>
                         View details
@@ -117,5 +148,6 @@
         
         </div>
     </main>
+    <script src="assets/scripts/dashboard.js"></script>
 </body>
 </html>
