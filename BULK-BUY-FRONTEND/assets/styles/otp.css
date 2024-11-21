@@ -133,7 +133,7 @@ main .input-container {
   margin-bottom: 2rem;
 }
 
-main input[type="number"] {
+main input[type="text"] {
   width: 15%;
   text-align: center;
   padding: 0.6rem 0.7rem;
