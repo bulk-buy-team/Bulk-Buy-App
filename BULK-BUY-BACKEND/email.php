@@ -19,7 +19,6 @@ if ($conn->connect_error) {
 
 if (isset($_POST['submit'])) {
     $email = htmlspecialchars($_POST ["email"]);
-
     
     $queryforlogin = "SELECT * FROM user WHERE email = '$email'";
     $result = $conn->query($queryforlogin);
@@ -29,16 +28,6 @@ if (isset($_POST['submit'])) {
     if (isset($_SESSION['otp']) && $emailresult) {
         echo "successful";
         header("location:../BULK-BUY-FRONTEND/otp1.php");
-
-
-    $queryforReset = "SELECT * FROM user WHERE email = '$email'";
-    $resultforReset = $conn->query($queryforReset);
-    $resetresult = $resultforReset->fetch_assoc();
-    if ($resetresult) {
-        $_SESSION['user'] = $resetresult;
-    echo "successful";
-        // header("location:../reset.html");
-
      } 
      else{
         echo "nusuccessful";
