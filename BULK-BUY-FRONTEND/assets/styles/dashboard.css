@@ -342,4 +342,8 @@ input[type="range"]::-webkit-slider-runnable-track {
     main {
         padding: 20px;
     }
+
+  .sidebar{
+    display: none;
+  }
 }
