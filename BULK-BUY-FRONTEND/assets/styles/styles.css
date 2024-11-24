@@ -27,7 +27,6 @@ nav {
   grid-template-columns: 1fr 1fr;
   row-gap: 1em;
   padding-block: 1em;
-  
   /* justify-items: space-between; */
   align-items: center;
   justify-content: space-between;
@@ -139,7 +138,7 @@ nav img {
 
 .hero-section button {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -163,6 +162,9 @@ button img {
 .curly-arrow {
   position: relative;
   z-index: 2;
+  /* border: thick solid red; */
+  width: 70%;
+  top: -1em;
 }
 
 .curly-arrow img {
@@ -188,6 +190,98 @@ button img {
   background-color: var(--clr-secondary);
   opacity: 50%; 
 }
+
+
+.how-it-works {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-image: url(../images/transparent.png);
+}
+
+.skewed {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color:#e5b34e84;
+  height: 100vh;
+  width: 50vw;
+  transform: rotate(150deg);
+
+
+  z-index: 0;
+}
+
+.how-it-works .container {
+  min-height:80vh;
+  padding: 50px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: var(--clr-neutral);
+  margin: var(--padding-main);
+}
+
+.container-flex {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  /* column-gap: 1em; */
+  justify-content: space-evenly;
+  color: var(--clr-neutral);
+}
+
+.container h2 {
+  text-decoration: underline;
+  color: var(--clr-primary);
+
+}
+
+.container-flex div {
+  flex-basis: 10em;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 10em; */
+  text-align: center;
+  border-radius: 5px;
+  /* min-height: 20em */
+
+}
+
+.container-flex div:nth-child(1),
+.container-flex div:nth-child(3) {
+  background-color: var(--clr-secondary);
+  padding: 1em;
+}
+
+.container-flex div:nth-child(2),
+.container-flex div:nth-child(4) {
+  padding: 1em;
+  color: var(--clr-secondary);
+}
+
+
+.container-flex span {
+  background-color: var(--clr-grey);
+  border: 3px solid var(--clr-neutral);
+  width: 2em;
+  height: 2em;
+  align-self: center;
+  position: relative;
+  top: -2em;
+  border-radius: 100%;
+  color: var(--clr-primary);
+  display: grid;
+  place-content: center;
+
+}
+
 
 
 @media screen and (max-width: 620px) {
@@ -235,3 +329,4 @@ button img {
     background-color: var(--clr-secondary);
     backdrop-filter: blur(20px); */
   }
+

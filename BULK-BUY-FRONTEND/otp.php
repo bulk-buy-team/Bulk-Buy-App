@@ -4,22 +4,19 @@ $user_otp = $_SESSION['otp'];
 var_dump($user_otp);
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/styles/forgot.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <title>Verify</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../BULK-BUY-FRONTEND/assets/styles/otp.css">
+  <title>Verify</title>
+</head>
+<body>
     <nav class="nav navbar-expand-lg">
       <div class="container-fluid cont-fluid">
         <div class="nav-flex">
@@ -55,29 +52,18 @@ var_dump($user_otp);
     </nav>
     <div class="cont-main">
       <div class="form-wrapper">
-        <h1 class="header">Insect your new password</h1>
-        <form id="form" action="../BULK-BUY-BACKEND/passwordreset.php" method="post">
-          
-           
-      <div class="input-fields">
-        <div class="input-container">
-          <label for="email">new password</label>
-          <input type="password" 
-          id="email" 
-          placeholder="password" 
-          required="true" 
-          name="password1" minlength="8" maxlength="16">
-        </div>
-  
-        <div class="input-container">
-          <label for="password">Password</label>
-          <input type="password" 
-          id="email" 
-          placeholder="password" 
-          required="true" 
-          name="password2" minlength="8" maxlength="16">
-        </div>
-          <button name="submit" class="submit" type="submit">update new password</button>
+        <h1 class="header">Verify Code</h1>
+        <p class="text">A verification code has been sent to your email</p>
+        <form id="form" action="../BULK-BUY-BACKEND/otp.php" method="post">
+          <div class="otp-container">
+            <input type="number" name="otp1" id="otp1" maxlength="1" />
+            <input type="number" name="otp2" id="otp2" maxlength="1" />
+            <input type="number" name="otp3" id="otp3" maxlength="1" />
+            <input type="number" name="otp4" id="otp4" maxlength="1" />
+          </div>
+          <p class="text">Didn't recieve an OTP?</p>
+          <p class="text"><a href="../BULK-BUY-BACKEND/email.php">Resend Code</a></p>
+          <button name="submit" class="submit" type="submit">Verify</button>
         </form>
       </div>
       <div class="hero-image">

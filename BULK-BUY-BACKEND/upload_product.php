@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (!isset($_SESSION["user"])) {
+if (!isset($_SESSION["user12"])) {
     header("location:../login.html");
 }
 
@@ -23,11 +23,13 @@ if (isset ($_POST["submit"])) {
     $product_type = ($_POST ["product_type"]);
     $total_unit = ($_POST ["total_unit"]);
     $total_amount = ($_POST ["total_amount"]);
-    $product_image = $_POST ["product_image"];    
+    $tempPath = ($_FILES['product_image']['tmp_name']);
+    $imageData = file_get_contents($tempPath);
+    $base64Image = base64_encode($imageData);
 
     // SQL query to insert data
     $stmt = $conn->prepare("INSERT INTO product (product, product_type, total_unit, total_amount, product_image) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $product, $product_type, $total_unit, $total_amount, $product_image);
+    $stmt->bind_param("sssss", $product, $product_type, $total_unit, $total_amount, $base64Image);
     $stmt->execute();
     
     if ($stmt) {

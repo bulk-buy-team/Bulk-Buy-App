@@ -1,10 +1,10 @@
 <<?php
 session_start();
-if (!isset($_SESSION["user1"])) {
-    header("location:../BULK-BUY-FRONTEND/login.html");
-}
+// if (!isset($_SESSION["user"])) {
+//     header("location:../BULK-BUY-FRONTEND/login.html");
+// }
 
-$user = $_SESSION['user1'];
+$user = $_SESSION['user12'];
 $user_id = $user['user_id'];
 $firstname = $user['firstname'];
 $lastname = $user['lastname'];
@@ -36,13 +36,13 @@ h1,form{
 <?php  echo "wellcome to bulk buy MR " . $firstname . ' ' . $lastname?>
 
 
-    <form method="post" action="./backend/upload_product.php">
+    <form method="post" action="../BULK-BUY-BACKEND/upload_product.php" enctype="multipart/form-data">
             <h3 id="news-db">upload a product</h3><br>
             <select id="news-option" name="product">
                 <option >--Select an option--</option>
                 <option value="rice">rice</option>
                 <option value="beans">beans</option>
-                <option value="indomie">indomie</option>
+                <option value="noode">noodle</option>
                 <option value="garri">garri</option>
             </select><br><br>
             <h3>type of product</h3>

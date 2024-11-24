@@ -23,7 +23,6 @@ header {
   padding-inline: var(--padding-main);
   background-color: var(--clr-primary);
 }
-
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,11 +35,9 @@ nav {
   /* gap: 1em; */
   font-family: 'Montserrat';
 }
-
 .logo {
   width: 100px;
 }
-
 nav .logo img {
   width: 100%;
 }
@@ -52,18 +49,15 @@ nav ul {
   align-items: center;
   text-wrap: nowrap;
 }
-
 nav div {
   display: inline-flex;
   justify-self: end;
   align-items: center;
 }
-
 a {
   text-decoration: none;
   color: var(--clr-neutral);
 }
-
 nav div {
   display: flex;
   gap: 1em;
@@ -75,12 +69,10 @@ nav li a {
   padding: 10px 30px;
   border-radius: 10px;
 }
-
 .active {
   background-color: var(--clr-accent);
   border-color: var(--clr-accent);
 } 
-
 nav img {
   width: 1em;
 }
@@ -111,6 +103,7 @@ main::-webkit-scrollbar{
 main form {
   border-radius: 10px;
   max-width: 420px;
+  width: 90%;
   padding: 2.5em 2.5em;
   display: flex;
   flex-direction: column;
@@ -126,7 +119,6 @@ main form {
   display: inline-grid;
   justify-items: center;
 }
-
 
 main span {
   text-align: center;
@@ -145,7 +137,6 @@ main input {
   height: 3em;
   padding: .7em 1.5em;
   border-radius: 5px;
-
   background-color: var(--clr-neutral);
 }
 
@@ -235,7 +226,6 @@ main form input[type="submit"] {
     grid-row-start: 1;
     align-self: start;
   }
-
   .hamburger {
     display: grid;
     grid-row-start: 1;
@@ -244,7 +234,6 @@ main form input[type="submit"] {
     top: 25px;
     right: 20%;
   }
-
   nav ul {
     display: none;
     grid-column-start: 1;
@@ -252,7 +241,6 @@ main form input[type="submit"] {
     grid-template-columns: 1fr 1fr;
     padding-block: 20px;
   }
-
   .mobile-nav-list{
     display: grid;
   }
@@ -260,8 +248,6 @@ main form input[type="submit"] {
   main {
     grid-template-columns: 1fr;
     position: relative;
-
-  
   }
   
   main form {
@@ -270,8 +256,11 @@ main form input[type="submit"] {
     align-self: center;
     z-index: 2;
     margin-top: 4em;
-    opacity: .9;
     background-color: var(--clr-secondary);
     /* backdrop-filter: blur(20px); */
+  }
+
+  .hero-image { 
+    display: none;
   }
 }

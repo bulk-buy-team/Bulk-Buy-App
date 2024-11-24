@@ -25,13 +25,15 @@ if (isset ($_POST["submit"])) {
         $loginresult = $result->fetch_assoc();
 
         $role = $loginresult['role'];
+        $_SESSION["user12"] = $loginresult;
 
     if ($loginresult && $role) {
-            $_SESSION['user1'] = $loginresult;
+            
+            echo $_SESSION ["user12"];
             header("location:../BULK-BUY-FRONTEND/admindashboard.php");
         } else {
-         echo "Error "; 
-         header("location:../BULK-BUY-FRONTEND/dashboard.php");
+          
+          header("location:../BULK-BUY-FRONTEND/dashboard.php");
        }
     // Close connection
      $conn->close();
@@ -39,7 +41,7 @@ if (isset ($_POST["submit"])) {
 else {
     echo 'error loging in';
   }
-$conn->close();
+// $conn->close();
 ?>
 
 
