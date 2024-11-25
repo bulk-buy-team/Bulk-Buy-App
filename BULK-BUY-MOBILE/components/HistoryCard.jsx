@@ -16,7 +16,7 @@ const HistoryCard = ({units=3, name="Garri", time="3:40 pm", date="16 Aug 2024",
         <View style={styles.orderCode}><Text style={styles.whiteText}>Order code: {orderCode}</Text></View>
       </View>
       <View style={styles.cardFooter}>
-        <Link href={"receipt"} style={styles.link}>View receipt</Link>
+        <Link href={"confirmation"} style={styles.link}>View receipt</Link>
       </View>
     </View>
   )
