@@ -6,10 +6,10 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+       "distribution": "apk"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "store"
     },
     "production": {
       "autoIncrement": true
