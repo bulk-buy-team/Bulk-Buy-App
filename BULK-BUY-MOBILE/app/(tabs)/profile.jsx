@@ -13,8 +13,6 @@ const profile = () => {
   
   // Fallback for data
   const safeDeals = deals || [];
-  // const safeFeaturedProducts = featuredProducts || [];
-  // const safeContributions = contributions || [];
 
   return (
     <ScrollView contentContainerStyle={styles.contentContainer}>

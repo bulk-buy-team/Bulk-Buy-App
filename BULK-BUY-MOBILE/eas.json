@@ -1,18 +1,28 @@
 {
   "cli": {
-    "version": ">= 13.2.0",
+    "version": ">= 3.13.2",
     "appVersionSource": "remote"
   },
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "distribution": "store",
+      "autoIncrement": "versionCode",
+      "android": {
+        "gradleCommand": ":app:bundleRelease"
+      }
     }
   },
   "submit": {
