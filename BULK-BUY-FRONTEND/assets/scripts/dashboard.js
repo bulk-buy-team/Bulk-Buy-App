@@ -4,8 +4,14 @@ let analysisBar = document.querySelector("#analysis-bar");
 let pageTitle = document.querySelector('.page-title')
 let faq = document.getElementById('faq')
 let support = document.getElementById('support')
+let plus = document.querySelector(".plus");
+let minus = document.querySelector(".minus");
+let noOfUnits = document.querySelector('unit-no');
+console.log("yo");
 
-console.log("yo")
+minus.addEventListener('click', ()=>{
+  console.log(noOfUnits);
+})
 
 let paths = [
   {
