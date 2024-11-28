@@ -231,9 +231,11 @@ input[type="search"] {
 .cart-quantity button {
     outline: 0;
     border: 0;
+    /* padding-inline: 1em; */
 
     font-size: .8rem;
 
+    cursor: pointer;
     background-color: var(--clr-neutral);
 }
 
