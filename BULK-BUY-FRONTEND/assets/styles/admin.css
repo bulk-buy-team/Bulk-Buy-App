@@ -77,25 +77,101 @@ input[type="search"] {
     padding: .5em 1.2em;
 }
 
-.mobile-navbar{
-  display: none;
-}
 .main-container{
   display: grid;
   margin-top: var(--margin-min);
   gap: var(--margin-min);
 }
+.welcome-user {
+    display: flex;
+    align-items: start;
+    gap: 1em;
 
-.coming-soon{
-  margin: auto;
-  padding: 1rem;
+    border-radius: var(--border-radius-card);
+    padding: var(--padding-min);
+    min-height: 6em;
+
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral);
 }
-.coming-soon h2{
-  color: var(--clr-accent);
-  text-align: center;
+.welcome-user img {
+    width: 5em;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+
+    border-radius: 10px;
+    padding: var(--padding-min);
+    min-height: 6em;
+
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral);
+}
+.content-container button {
+    outline: none;
+    border: none;
+    background-color: var(--clr-accent);
+    color: var(--clr-neutral);
+    padding: var(--padding-btn);
+    border-radius: var(--border-radius-btn);
+}
+.mobile-navbar{
+  display: none;
+}
+
+form{
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 5px;
+  background-color: var(--clr-secondary);
+}
+
+label{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+input{
+  width: 100%;
+  margin: 0.5rem 0rem 1rem 0rem;
+  height: 3rem;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+input[type="file"]{
+  border: 0px;
+}
+
+input[type="submit"]{
+  color: #fff;
+  border-radius: 20px;
+  border: 1px solid var(--clr-accent);
+  background-color: var(--clr-accent);
+  height: 3rem;
   font-weight: bold;
 }
 
+.add-product{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.add-product button{
+  width: 6rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  border: 1px solid var(--clr-accent);
+  border-radius: 5px;
+  background-color: var(--clr-accent);
+  font-weight: bold;
+}
 /* Mobile View */
 @media screen and (max-width: 620px) {
   :root {
@@ -107,6 +183,7 @@ input[type="search"] {
   main {
     padding: 20px;
   }
+
   .sidebar{
     display: none;
   }
