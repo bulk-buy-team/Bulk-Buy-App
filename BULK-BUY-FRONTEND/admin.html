@@ -52,7 +52,29 @@
           <span>Hi! Welcome back, you've been missed.</span>
         </div>
       </div>
+      <div class="add-product">
+        <h2>Add New product</h2>
+        <button class="add-new">+</button>
+      </div>
+      <form action="" id="form" style="display: none">
+        <label for="type-of-product">
+          Type of product
+        </label>
+        <input type="text" id="type-of-product">
+        
+        <label for="total-unit">Total Unit</label>
+        <input type="number" id="total-units">
+        
+        <label for="total-amount">Total amount</label>
+        <input type="number" id="total-amoumt">
+        
+        <label for="product-image">Product Image</label>
+        <input type="file" id="product-image">
+        
+        <input type="submit" value="Upload product">
+      </form>
     </div>
   </main>
+<script src="assets/scripts/admin.js"></script>
 </body>
 </html>
