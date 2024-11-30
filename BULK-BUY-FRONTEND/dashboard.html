@@ -12,24 +12,24 @@
       <img src="assets/images/logo.PNG" alt="">
     </div>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">My cart</a></li>
-        <li><a href="#">Order History</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
+        <ul>
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="history.html">Order History</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <!-- <li><a href="#">Support</a></li> -->
+            <!-- <li><a href="#">Settings</a></li> -->
+            <!-- <li><a href="#">Logout</a></li> -->
+        </ul>
     </nav>
   </div>
   <div class="mobile-navbar">
     <nav>
       <ul>
-        <li class="Home">home</li>
-        <li class="cart">cart</li>
-        <li class="history">History</li>
-        <li class="settings">Settings</li>
+        <a href="dashboard.html"><li class="Home"><img src="assets/images/home.png" alt=""></li></a>
+        <a href="product.html"><li class="cart"><img src="assets/images/shopping-cart.png" alt=""></li></a>
+        <a href="history.html"><li class="history"><img src="assets/images/calendar.png" alt=""></li></a>
+        <a href="profile.html"><li class="settings"><img src="assets/images/profile.png" alt=""></li></a>
       </ul>
     </nav>
   </div>
@@ -40,7 +40,10 @@
         <a href="#"><img src="assets/images/bell.png" alt="notification"></a>
       </div>
       <div class="search-bar">
-        <input type="search" name="search" id="search">
+        <div class="search-icon">
+            <img src="assets/images/search1.png" alt="">
+        </div>
+        <input type="search" name="search" id="search" placeholder="Search">
       </div>
     </header>
         <div class="main-container">
@@ -75,10 +78,10 @@
                         </div>
                         <div>1 unit: N800.00</div>
                         <div class="cart-quantity">
-                            <button>Add to Cart</button>
-                            <button>-</button>
-                            <input type="number" name="no-of-units" value="6">
-                            <button>+</button>
+                            <button>Order Now</button>
+                            <button class="minus">-</button>
+                            <input type="number" name="no-of-units" value="6" class="unit-no">
+                            <button class="plus">+</button>
                         </div>
                     </div>
                 </div>
@@ -96,10 +99,10 @@
                         </div>
                         <div>1 unit: N800.00</div>
                         <div class="cart-quantity">
-                            <button>Add to Cart</button>
-                            <button>-</button>
-                            <input type="number" name="no-of-units" value="5">
-                            <button>+</button>
+                            <button>Order Now</button>
+                            <button class="minus">-</button>
+                            <input type="number" name="no-of-units" value="5" class="unit-no">
+                            <button class="plus">+</button>
                         </div>
                     </div>
                 </div>
@@ -117,10 +120,10 @@
                         </div>
                         <div>1 unit: N1000.00</div>
                         <div class="cart-quantity">
-                            <button>Add to Cart</button>
-                            <button>-</button>
-                            <input type="number" name="no-of-units" value="9">
-                            <button>+</button>
+                            <button>Order Now</button>
+                            <button class="minus">-</button>
+                            <input type="number" name="no-of-units" value="9" class="unit-no">
+                            <button class="plus">+</button>
                         </div>
                     </div>
                 </div>
