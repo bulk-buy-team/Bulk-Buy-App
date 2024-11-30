@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     if (isset($_SESSION['otp']) && $use1_otp == $userotp) {
         if (time() <= $_SESSION['otp_expiry']) {
             echo "otp successful";
-            header("location:../BULK-BUY-FRONTEND/resetpassword.html");
+            header("location:../BULK-BUY-FRONTEND/reset.html");
         } else {
             echo "OTP expired. Please request a new one.";
         }

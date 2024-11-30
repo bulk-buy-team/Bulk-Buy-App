@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
     
     if (isset($_SESSION['otp']) && $emailresult) {
         echo "successful";
-        header("location:../BULK-BUY-FRONTEND/otp1.php");
+        header("location:../BULK-BUY-FRONTEND/otp.php");
      } 
      else{
         echo "nusuccessful";

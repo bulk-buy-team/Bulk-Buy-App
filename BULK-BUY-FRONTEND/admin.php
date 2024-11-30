@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["user13"])) {
+    header("location:../login.html");
+}
+
+
+$user = $_SESSION['user13'];
+$user_id = $user['user_id'];
+$firstname = $user['firstname'];
+$lastname = $user['lastname'];
+$email = $user['email'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +31,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="dashboard.html">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="history.html">Order History</a></li>
-        <li><a href="profile.html">Profile</a></li>
+      <li><a href="admin.php">Home</a></li>
+            <li><a href="product.php">Products</a></li>
+            <li><a href="history.php">Order History</a></li>
+            <li><a href="profile.php">Profile</a></li>
         <!-- <li><a href="#">Support</a></li> -->
         <!-- <li><a href="#">Settings</a></li> -->
         <!-- <li><a href="#">Logout</a></li> -->
@@ -26,11 +43,11 @@
   </div>
   <div class="mobile-navbar">
     <nav>
-      <ul>
-        <li>home</li>
-        <li>cart</li>
-        <li>History</li>
-        <li>Settings</li>
+    <ul>
+        <a href="admin.php"><li class="Home"><img src="assets/images/home.png" alt=""></li></a>
+        <a href="product.php"><li class="product"><img src="assets/images/shopping-cart.png" alt=""></li></a>
+        <a href="history.php"><li class="history"><img src="assets/images/calendar.png" alt=""></li></a>
+        <a href="profile.php"><li class="profile"><img src="assets/images/profile.png" alt=""></li></a>
       </ul>
     </nav>
   </div>
@@ -42,21 +59,23 @@
       </div>
       <div class="search-bar">
         <input type="search" name="search" id="search">
+        <input type="submit">
       </div>
     </header>
     <div class="main-container">
       <div class="welcome-user">
         <img src="assets/images/profile-circle.svg" alt="">
         <div class="salutation">
-          <h3>Welcome Emmanuel!</h3>
-          <span>Hi! Welcome back, you've been missed.</span>
+          <?php  echo "<h3>Welcome . $firstname  $lastname!</h3>
+          <span>Hi! Welcome back, you've been missed.</span>" ?>
         </div>
       </div>
+
       <div class="add-product">
         <h2>Add New product</h2>
         <button class="add-new">+</button>
       </div>
-      <form action="" id="form" style="display: none">
+      <form action="../BULK-BUY-BACKEND/upload_product.php" method="post" id="form" style="display: none">
         <label for="type-of-product">
           Type of product
         </label>
