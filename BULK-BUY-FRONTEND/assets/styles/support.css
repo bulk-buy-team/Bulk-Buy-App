@@ -68,17 +68,6 @@ header img {
     font-size: 1.5em;
     font-weight: bold;
 }
-<<<<<<< HEAD
-.search-bar {
-  display: flex;
-  align-items: center;
-  border-radius: 50px;
-  border-radius: 50px;
-  padding-inline: var(--padding-min);
-  background-color: lightgrey;
-}
-=======
->>>>>>> baf767034e60dcb30d9ad75dbe97094de7f0df66
 input[type="search"] {
     width: 100%;
     outline: none;
@@ -88,69 +77,24 @@ input[type="search"] {
     padding: .5em 1.2em;
 }
 
+.mobile-navbar{
+  display: none;
+}
 .main-container{
   display: grid;
   margin-top: var(--margin-min);
   gap: var(--margin-min);
 }
-.welcome-user {
-    display: flex;
-    align-items: start;
-    gap: 1em;
 
-    border-radius: var(--border-radius-card);
-    padding: var(--padding-min);
-    min-height: 6em;
-
-    background-color: var(--clr-primary);
-    color: var(--clr-neutral);
+.coming-soon{
+  margin: auto;
+  padding: 1rem;
 }
-.welcome-user img {
-    width: 5em;
-}
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-
-    border-radius: 10px;
-    padding: var(--padding-min);
-    min-height: 6em;
-
-    background-color: var(--clr-primary);
-    color: var(--clr-neutral);
-}
-.content-container button {
-    outline: none;
-    border: none;
-    background-color: var(--clr-accent);
-    color: var(--clr-neutral);
-    padding: var(--padding-btn);
-    border-radius: var(--border-radius-btn);
-}
-.mobile-navbar{
-  display: none;
-}
-<<<<<<< HEAD
-.link{
-  display: block;
-  background-color: var(--clr-accent);
-  padding: 0.5rem 1rem;
-  border: 0px ;
-  border-radius: 20px;
-  color: var(--clr-neutral);
+.coming-soon h2{
+  color: var(--clr-accent);
+  text-align: center;
   font-weight: bold;
-  font-size: 14px;
-  width: 100;
-  text-decoration: none;
-  margin-bottom: 1rem;
 }
-.link-container{
-  margin-top: 1.5rem;
-}
-=======
->>>>>>> baf767034e60dcb30d9ad75dbe97094de7f0df66
 
 /* Mobile View */
 @media screen and (max-width: 620px) {
@@ -163,25 +107,9 @@ input[type="search"] {
   main {
     padding: 20px;
   }
-
   .sidebar{
     display: none;
   }
-<<<<<<< HEAD
-
-  .mobile-navbar{
-      display: block;
-      width: 100%;
-      /* height: 1.2em; */
-      position: fixed;
-      left: 0%;
-      bottom: 0px;
-      padding: 0.4rem;
-      z-index: 1000;
-      background-color: var(--clr-neutral);
-  }
-  
-=======
   .mobile-navbar{
     display: block;
     width: 100%;
@@ -190,7 +118,6 @@ input[type="search"] {
     bottom: 3%;
     padding: 0.4rem;
   }
->>>>>>> baf767034e60dcb30d9ad75dbe97094de7f0df66
   .mobile-navbar ul{
     width: 100%;
     display: flex;
@@ -199,23 +126,6 @@ input[type="search"] {
     align-content: space-around;
     background-color: var(--clr-accent);
     border-radius: 50px;
-<<<<<<< HEAD
-    /* padding: 0.2rem; */
-  }
-
-  .mobile-navbar ul li{
-   border-bottom: 0px; 
-  }
-
-  .mobile-navbar img {
-    width: 1.5em;
-  }
-
- .main-container{
-    padding-bottom: 4.5rem;
-  }
-  
-=======
     padding: 0.2rem;
   }
   .mobile-navbar ul li{
@@ -224,5 +134,4 @@ input[type="search"] {
   .main-container{
     padding-bottom: 5.5rem;
   }
->>>>>>> baf767034e60dcb30d9ad75dbe97094de7f0df66
 }

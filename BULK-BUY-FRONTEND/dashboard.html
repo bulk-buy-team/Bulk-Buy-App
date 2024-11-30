@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/styles/dashboard.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="assets/images/logo.PNG" alt="">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My cart</a></li>
+        <li><a href="#">Order History</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="mobile-navbar">
+    <nav>
+      <ul>
+        <li class="Home">home</li>
+        <li class="cart">cart</li>
+        <li class="history">History</li>
+        <li class="settings">Settings</li>
+      </ul>
+    </nav>
+  </div>
+    <main>
+      <header>
+      <div class="home">
+        <a href="#" class="page-title">Home</a>
+        <a href="#"><img src="assets/images/bell.png" alt="notification"></a>
+      </div>
+      <div class="search-bar">
+        <input type="search" name="search" id="search">
+      </div>
+    </header>
+        <div class="main-container">
+            <div class="welcome-user">
+                    <img src="assets/images/profile-circle.svg" alt="">
+                    <div class="salutation">
+                        <h3>Welcome Emmanuel!</h3>
+                        <span>Hi! Welcome back, you've been missed.</span>
+                    </div>
+            </div>
+
+            <div class="content-container">
+                <div class="text">
+                    <h3>Bag of Beans | Bag of Wheat</h3>
+                    <span>Discount: 25%</span>
+                </div>
+                <button>Order Now</button>
+            </div>
+
+
+            <div class="product-list">
+                <!-- Garri Product Card -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/garri.PNG" alt="Garri">
+                        <img src="assets/images/menu-1.svg" alt="" class="menu-icon">
+                        <span>N88,000</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h2>Garri: </h2> <span class="unit-number">110 Units</span>
+                        </div>
+                        <div>1 unit: N800.00</div>
+                        <div class="cart-quantity">
+                            <button>Add to Cart</button>
+                            <button>-</button>
+                            <input type="number" name="no-of-units" value="6">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garri Product Card -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/garri.PNG" alt="Garri">
+                        <img src="assets/images/menu-1.svg" alt="" class="menu-icon">
+                        <span>N88,000</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h2>Garri: </h2> <span class="unit-number">110 Units</span>
+                        </div>
+                        <div>1 unit: N800.00</div>
+                        <div class="cart-quantity">
+                            <button>Add to Cart</button>
+                            <button>-</button>
+                            <input type="number" name="no-of-units" value="5">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Noodles Product Card -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/noodles.PNG" alt="Noodles">
+                        <img src="assets/images/menu-1.svg" alt="" class="menu-icon">
+                        <span>N88,000</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h2>Noodles: </h2> <span class="unit-number">45 Units</span>
+                        </div>
+                        <div>1 unit: N1000.00</div>
+                        <div class="cart-quantity">
+                            <button>Add to Cart</button>
+                            <button>-</button>
+                            <input type="number" name="no-of-units" value="9">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis">
+                <div>
+                    <h2>General Analysis: Rice</h2>
+                    <div>Total number of people who contributed</div>
+                </div>
+
+                <div class="analysis-container">
+                    <input type="range" name="analysis-bar" id="analysis-bar" value="90" oninput="analysisValue.value = value + '%'">
+                    <output id="analysisValue">90%</output>
+                </div>
+                
+                <div class="analysis-container">
+                    <div>
+                        <div class="buyer-images">
+                            <img src="assets/images/profile-3.png" alt="">
+                            
+                            <div>+5 Members</div>
+                        </div>
+                    </div>
+
+
+                    <a>
+                        View details
+                    </a>
+                </div>
+
+            </div>
+  </div>
+    </main>
+    <script src="assets/scripts/dashboard.js"></script>
+</body>
+</html>
