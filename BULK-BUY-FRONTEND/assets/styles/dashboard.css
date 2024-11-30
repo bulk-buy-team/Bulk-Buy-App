@@ -81,6 +81,15 @@ header img {
     font-weight: bold;
 }
 
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    border-radius: 50px;
+    padding-inline: var(--padding-min);
+    background-color: lightgrey;
+}
+
 input[type="search"] {
     width: 100%;
     outline: none;
@@ -156,8 +165,8 @@ input[type="search"] {
 }
 
 .product-image {
-    height: 9em;
-    /* min-width: 10em; */
+    min-height: 9em;
+    max-width: 10em;
     padding: var(--padding-min);
     padding-right: 3em;
 
@@ -222,9 +231,11 @@ input[type="search"] {
 .cart-quantity button {
     outline: 0;
     border: 0;
+    /* padding-inline: 1em; */
 
     font-size: .8rem;
 
+    cursor: pointer;
     background-color: var(--clr-neutral);
 }
 
@@ -332,29 +343,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   display: none;
 }
 
-.link{
-  display: block;
-  background-color: var(--clr-accent);
-  padding: 1rem;
-  border: 0px ;
-  border-radius: 20px;
-  color: var(--clr-neutral);
-  font-weight: bold;
-  font-size: 16px;
-  width: 100;
-  text-decoration: none;
-}
-.coming-soon{
-  margin: auto;
-  padding: 1rem;
-}
-.coming-soon h2{
-  color: var(--clr-accent);
-  text-align: center;
-  font-weight: bold;
-}
-
-
 
 /* Mobile View */
 @media screen and (max-width: 620px) {
@@ -374,14 +362,17 @@ input[type="range"]::-webkit-slider-runnable-track {
   .sidebar{
     display: none;
   }
+  
   .mobile-navbar{
-    display: block;
-    width: 100%;
-    position: fixed;
-    left: 0%;
-    bottom: 3%;
-    padding: 0.4rem;
-    z-index: 1000;
+      display: block;
+      width: 100%;
+      /* height: 1.2em; */
+      position: fixed;
+      left: 0%;
+      bottom: 0px;
+      padding: 0.4rem;
+      z-index: 1000;
+      background-color: var(--clr-neutral);
   }
   .mobile-navbar ul{
     width: 100%;
@@ -391,12 +382,17 @@ input[type="range"]::-webkit-slider-runnable-track {
     align-content: space-around;
     background-color: var(--clr-accent);
     border-radius: 50px;
-    padding: 0.2rem;
+    /* padding: 0.2rem; */
   }
   .mobile-navbar ul li{
    border-bottom: 0px; 
   }
+
+  .mobile-navbar img {
+    width: 1.5em;
+  }
+
  .main-container{
-    padding-bottom: 5.5rem;
+    padding-bottom: 4.5rem;
   } 
 }

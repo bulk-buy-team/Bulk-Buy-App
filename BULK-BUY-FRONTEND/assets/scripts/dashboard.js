@@ -4,12 +4,31 @@ let analysisBar = document.querySelector("#analysis-bar");
 let pageTitle = document.querySelector('.page-title')
 let faq = document.getElementById('faq')
 let support = document.getElementById('support')
+let plus = document.querySelectorAll(".plus");
+let minus = document.querySelectorAll(".minus");
+let noOfUnits = document.querySelectorAll('.unit-no');
+console.log("yo");
 
-console.log("yo")
+for (let i = 0; i < plus.length; i++) {
+  plus[i].addEventListener('click', ()=>{
+    noOfUnits[i].value++;
+  })
+  
+}
+
+for (let i = 0; i < minus.length; i++) {
+  minus[i].addEventListener('click', ()=>{
+    if(noOfUnits[i].value > 0) {
+      noOfUnits[i].value--
+    }
+    });
+}
+
 
 let paths = [
   {
     pathName: 'profile',
+    path: 'profile.html',
     id: 'profile'
   },
   {
@@ -46,23 +65,6 @@ function settingsPage(path,pathName,id){
   links.textContent = `${pathName}`
   main.appendChild(links)
 }
-// function supportPage(){
-//   let faq = document.createElement('div')
-//   faq.setAttribute('class','coming-soon')
-//   main.appendChild(faq)
-//   let text = document.createElement('h2')
-//   text.textContent = `Comimg soon`
-//   faq.appendChild(text)
-// }
-// 
-// function faqPage(){
-//   let faq = document.createElement('div')
-//   faq.setAttribute('class','coming-soon')
-//   main.appendChild(faq)
-//   let text = document.createElement('h2')
-//   text.textContent = `Comimg soon`
-//   faq.appendChild(text)
-// }
 
 settings.addEventListener('click', () => {
   pageTitle.textContent = 'Settings'
@@ -71,15 +73,3 @@ settings.addEventListener('click', () => {
     settingsPage(item.path,item.pathName,item.id)
   })
 })
-
-// faq.addEventListener('click', () => {
-//   pageTitle.textContent = 'FAQs'
-//   main.innerHTML = '';
-//   faqPage()
-// })
-// 
-// support.addEventListener('click', () => {
-//   pageTitle.textContent = 'FAQs'
-//   main.innerHTML = '';
-//   faqPage()
-// })
