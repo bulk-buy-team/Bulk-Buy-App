@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (!isset($_SESSION["user13"])) {
+if (!isset($_SESSION["user12"])) {
     header("location:../login.html");
 }
 
