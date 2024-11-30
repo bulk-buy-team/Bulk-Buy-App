@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 console.log("product page");
 let plus = document.querySelectorAll(".plus");
 let minus = document.querySelectorAll(".minus");
@@ -20,6 +19,3 @@ for (let i = 0; i < minus.length; i++) {
 }
 
 console.log('Hiiiiii')
-=======
-console.log("product page")
->>>>>>> baf767034e60dcb30d9ad75dbe97094de7f0df66

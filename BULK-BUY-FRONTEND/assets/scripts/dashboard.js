@@ -4,7 +4,6 @@ let analysisBar = document.querySelector("#analysis-bar");
 let pageTitle = document.querySelector('.page-title')
 let faq = document.getElementById('faq')
 let support = document.getElementById('support')
-<<<<<<< HEAD
 let plus = document.querySelectorAll(".plus");
 let minus = document.querySelectorAll(".minus");
 let noOfUnits = document.querySelectorAll('.unit-no');
@@ -25,10 +24,6 @@ for (let i = 0; i < minus.length; i++) {
     });
 }
 
-=======
-
-console.log("yo")
->>>>>>> baf767034e60dcb30d9ad75dbe97094de7f0df66
 
 let paths = [
   {
