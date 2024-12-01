@@ -1,9 +1,9 @@
 const form = document.querySelector('form')
 const submit = document.querySelector('.submit')
 const comfirmPasswrd = document.getElementById('comfirmPasswrd')
-
 let hamburger = document.querySelector(".hamburger");
 let menu = document.querySelector("ul");
+
 
 hamburger.addEventListener("click", ()=>{
     menu.classList.toggle("mobile-nav-list");
@@ -12,7 +12,7 @@ hamburger.addEventListener("click", ()=>{
 
 //simple fumctiom for comaping passwords 
 //has not been properly implemented
-function comparePassword(pswrd1 , pswrd2){
+/*function comparePassword(pswrd1 , pswrd2){
   
 }
 
@@ -26,9 +26,6 @@ comfirmPasswrd.addEventListener('keydown', (e) => {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 })
-
-
-
 
 submit.addEventListener('submit', (e) => {
   const formData = new FormData(form);
@@ -52,4 +49,4 @@ submit.addEventListener('submit', (e) => {
   }else{
     alert("not the same")
   }
- })
+ })*/
