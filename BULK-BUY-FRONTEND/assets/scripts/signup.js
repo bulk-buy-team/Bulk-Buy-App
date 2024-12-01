@@ -12,7 +12,6 @@ comfirmPasswrd.addEventListener('keydown', (e) => {
   const formData = new FormData(form)
   let confirmPswrd = formData.get('comfirmPasswrd')
   let password = getFormData().password;
-  
 })
 
 

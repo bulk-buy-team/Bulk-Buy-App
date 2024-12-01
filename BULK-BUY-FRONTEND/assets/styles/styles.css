@@ -327,6 +327,7 @@ button img {
     margin-top: 4em;
     opacity: .9;
     background-color: var(--clr-secondary);
-    backdrop-filter: blur(20px); */
+    backdrop-filter: blur(20px);
+    }*/
   }
 

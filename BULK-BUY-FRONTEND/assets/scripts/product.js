@@ -1,3 +1,4 @@
+
 console.log("product page");
 let plus = document.querySelectorAll(".plus");
 let minus = document.querySelectorAll(".minus");
