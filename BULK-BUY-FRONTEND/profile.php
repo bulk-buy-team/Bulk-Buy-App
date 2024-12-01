@@ -69,9 +69,9 @@ $product = $stnt1->fetch_all(MYSQLI_ASSOC);
         <li><a href="product.php">Products</a></li>
         <li><a href="history.php">Order History</a></li>
         <li><a href="profile.php">Profile</a></li>
-        <!-- <li><a href="#">Support</a></li> -->
+        <li><a href="faq.html">Faq</a></li> 
         <!-- <li><a href="#">Settings</a></li> -->
-        <!-- <li><a href="#">Logout</a></li> -->
+        <li><a href="../BULK-BUY-BACKEND/logout.php">Logout</a></li>
       </ul>
     </nav>
   </div>
@@ -123,6 +123,7 @@ $product = $stnt1->fetch_all(MYSQLI_ASSOC);
       </div>
       <div class="link-container">
         <a href="history.php" class="link">Order History</a>
+        <a href="faq.html" class="link">Order History</a>
         <a href="../BULK-BUY-BACKEND/logout.php" class="link">Logout</a>
       </div>
     </div>

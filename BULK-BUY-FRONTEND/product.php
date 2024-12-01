@@ -66,9 +66,10 @@ $product = $stnt1->fetch_all(MYSQLI_ASSOC);
             <li><a href="product.php">Products</a></li>
             <li><a href="history.php">Order History</a></li>
             <li><a href="profile.php">Profile</a></li>
-        <!-- <li><a href="#">Support</a></li> -->
-        <!-- <li><a href="#">Settings</a></li> -->
-        <!-- <li><a href="#">Logout</a></li> -->
+            <li><a href="faq.html">Faq</a></li> 
+            <!-- <li><a href="#">Settings</a></li> -->
+            <li><a href="../BULK-BUY-BACKEND/logout.php">Logout</a></li>
+
       </ul>
     </nav>
   </div>
